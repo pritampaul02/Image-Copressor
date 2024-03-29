@@ -1,0 +1,7 @@
+.rangeSlider {
+    background-color: var(--blue);
+}
+
+.rangeSlider::-webkit-slider-thumb {
+    background: var(--green);
+}
