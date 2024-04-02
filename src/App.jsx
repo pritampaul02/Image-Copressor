@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Compress from "./pages/Compress";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Download from "./pages/Download";
 
 import "./style/global.css";
 
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/compress" element={<Compress />} />
+                <Route path="/download" element={<Download />} />
             </Routes>
 
             <Footer />
