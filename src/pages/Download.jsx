@@ -18,6 +18,9 @@ import pic13 from "../media/pic13.jpg";
 import "../style/Download.css";
 
 const Download = () => {
+    let uploadDate = "12/05/2023";
+    let imageSize = "13kb";
+
     return (
         <section>
             <div class="content">
@@ -33,14 +36,14 @@ const Download = () => {
                     </div> */}
                     <div id="after_img" class="select_img">
                         <img class="img_size" src={pic1} alt="pic1" />
-                        <p class="bef_aft_txt">After</p>
+                        {/* <p class="bef_aft_txt">After</p> */}
                     </div>
                 </div>
 
                 <div class="desc_conte">
                     <div class="desc">
-                        <p>Upload Date : 12/10/2023</p>
-                        Image Size : 10mb - 50kb
+                        <p>Upload Date : {`${uploadDate}`}</p>
+                        <p>Image Size : {`${imageSize}`}</p>
                     </div>
 
                     <div class="desc" id="download_shear_conte">
