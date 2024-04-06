@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Download from "./pages/Download";
 
 import "./style/global.css";
+import Error from "./pages/Error";
 
 const App = () => {
     return (
@@ -18,7 +19,8 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/compress" element={<Compress />} />
-                <Route path="/download" element={<Download />} />
+                <Route path="/uploaded-images" element={<Download />} />
+                <Route path="/*" element={<Error />} />
             </Routes>
 
             <Footer />

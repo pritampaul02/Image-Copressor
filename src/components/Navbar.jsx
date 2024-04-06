@@ -26,6 +26,16 @@ const Navbar = () => {
                 >
                     About
                 </Link>
+                <Link
+                    to="/uploaded-images"
+                    className={
+                        activeLocation === "/uploaded-images"
+                            ? "menuActive"
+                            : ""
+                    }
+                >
+                    Uploaded Image
+                </Link>
                 <Link className="profileContainer" to="/">
                     <img src={profile} alt="" />
                 </Link>

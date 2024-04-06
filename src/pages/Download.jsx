@@ -54,13 +54,17 @@ const Download = () => {
                     </div>
 
                     <div className="desc" id="download_shear_conte">
-                        <div
+                        {/* <a href={`${backImg}`} download={true}> */}
+                        <a
+                            href={`${backImg}`}
+                            download={true}
                             id="download-botton"
                             className="download-shear-botton"
                         >
                             Download
                             <HiDownload className="download_icon" />
-                        </div>
+                        </a>
+                        {/* </a> */}
                         <div
                             id="shear-botton"
                             className="download-shear-botton"

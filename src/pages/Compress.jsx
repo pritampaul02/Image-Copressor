@@ -27,14 +27,15 @@ const Compress = () => {
 
     return (
         <>
-            <div className="com_contaner">
-                <div className="com_process">
-                    <img src={bird} alt="bird" />
+            <div className="com_container">
+                <div className="compress-container">
+                    <div className="com_process">
+                        <img src={bird} alt="bird" />
+                    </div>
+                    <div className="com_process">
+                        <img src={bird} alt="bird" />
+                    </div>
                 </div>
-                <div className="com_process">
-                    <img src={bird} alt="bird" />
-                </div>
-
                 <input
                     type="range"
                     className="rangeSlider"
@@ -42,9 +43,10 @@ const Compress = () => {
                     // onChange={setfirst((e) => e.terget.value)}
                 />
                 <button> Compress image </button>
+                <div className="background-img"></div>
             </div>
 
-            <div className="imagesContainer">
+            {/* <div className="imagesContainer">
                 <div className="box_body">
                     <p id="your_image">Your images</p>
                     <p id="show_all"> show all...</p>
@@ -67,7 +69,7 @@ const Compress = () => {
                     <img src={tajmohol} />
                     <img src={whitecar} />
                 </div>
-            </div>
+            </div> */}
             {/* <div className="box_img">
                 <div className="image">
                     <img src={blackcar} />
