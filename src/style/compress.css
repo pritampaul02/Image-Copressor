@@ -1,20 +1,20 @@
-.com_contaner{
+.com_contaner {
     display: flex;
     height: 400px;
-    width: 650px;
+    width: 78%;
     border: solid black;
-    margin-left: 390px;
-    margin-top: 20px;
+    margin-inline: auto;
+    margin-top: 10px;
     position: relative;
 }
-.com_process{
+.com_process {
     height: 200px;
     width: 300px;
     gap: 10px;
     margin: 20px;
     left: 10px;
 }
-img{
+img {
     height: 180px;
     margin: 8px;
     width: auto;
@@ -30,7 +30,7 @@ img{
     background: var(--green);
 }
 
-button{
+button {
     background-color: var(--green);
     height: 50px;
     padding: 10px 15px;
@@ -43,14 +43,45 @@ button{
     position: absolute;
     right: 30px;
     bottom: 50px;
-
 }
-button:hover{
+button:hover {
     scale: 1.2;
-   /* transition-timing-function: ease-in-out;*/
+    /* transition-timing-function: ease-in-out;*/
     transition: all 0.3s ease;
 }
 
+.imagesContainer {
+    width: 78%;
+    margin-inline: auto;
+    position: relative;
+}
+.box_body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.second_content {
+    columns: 3;
+    column-gap: 25px;
+    break-inside: avoid;
+}
+
+.second_content img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    box-shadow: 5px 5px 20px #151515e1;
+    margin-bottom: 25px;
+    border-radius: 2%;
+    cursor: pointer;
+}
+.second_content img:hover {
+    scale: 1.05;
+    transition-duration: 1s;
+}
+
+/* 
 .box_body{
     display: flex;
     flex-wrap: wrap;
@@ -90,4 +121,4 @@ button:hover{
 
 .image img:hover{
     transform: scale(1.2);
-}
+} */

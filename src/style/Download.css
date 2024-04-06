@@ -147,7 +147,7 @@
     top: -360px;
     left: 0px;
     z-index: -1;
-    background-image: url("../media/pic1.jpg");
+    /* background-image: url("../media/pic1.jpg"); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;

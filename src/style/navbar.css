@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--blue);
+    backdrop-filter: blur(15px);
     padding: 5px 30px;
     height: 56px;
     color: white;
