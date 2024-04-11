@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "../style/CustomRangeSlider.css"; // Import CSS for styling
 
