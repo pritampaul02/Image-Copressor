@@ -1,0 +1,239 @@
+
+#first_container {
+  height: 470px;
+  width: 100%;
+  padding-top: 30px;
+  padding-inline: 180px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid #8218c9;   */
+}
+
+#slides_container {
+  height: 320px;
+  width: 100%;
+  background: url('../media/ForAboutPage/pic2.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  /* border: 1px solid #2518cb; */
+}
+
+#slide {
+  height: 100%;
+  width: 50%;
+  padding:40px 40px 0px 40px;
+  border-radius: 10px 0px 0px 10px;
+  background: #0000008b;
+  backdrop-filter: blur(10px);
+  text-align: justify;
+  /* border: 1px solid #5198ed; */
+}
+#thanks{
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+}
+#slide p{
+  color: #c0c0c0;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: var(--blue);
+  width: fit-content;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.iconStyle {
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--blueHover);
+  /* transform: scale(1.02); */
+}
+
+.btn:hover .iconStyle {
+  transform: translateX(5px);
+}
+
+
+
+#background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -125px;
+  z-index: -1;
+  background-image: url('../media/ForAboutPage/pic2.jpg');
+  background-size: 100%;
+  background-position: center;
+  transform: scale(1.1);
+  filter: blur(30px) brightness(70%) contrast(110%);
+}
+
+#second_container {
+  padding-inline: 180px;
+  position: relative;
+  top: -100px;
+  color: white;
+  /* border: 1px solid red; */
+  /* background: #181818; */
+}
+
+#team_container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#team_card {
+  width: 23%;
+  padding: 20px;
+  /* background: #66666643; */
+  background: #a4a4a422;
+  backdrop-filter: blur(05px);
+  border-radius: 10px;
+}
+
+#profile {
+  margin: auto;
+  width: 75%;
+  border-radius: 50%;
+  border: 5px solid #ffb93a;
+}
+
+#name {
+  margin-top: 10px;
+  color: #ffb93a;
+  font-weight: 800;
+  font-size: 18px;
+}
+#name_container hr{
+  margin-top: 5px;
+  background: #c0c0c0;
+  height: 1.5px;
+  border: none;
+}
+#post {
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#bio {
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 12px;
+  font-weight: 500;
+  color: #c0c0c0;
+}
+
+#contact i {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+#third_container{
+  width: 100%;
+  margin-top: 30px;
+  padding-inline: 180px;
+  position: relative;
+  top: -100px;
+  color: white;
+  /* border: 1px solid yellow; */
+}
+#contact_link_container{
+  margin-block: 50px;
+  padding-inline: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+}
+#logo_container{
+  height: 50px;
+  width: 50px;
+  background: #dedede3b;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 50%;
+}
+#third_container p{
+  margin-block: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#background_2{
+  width: 100%;
+  height: 225%;
+  position: absolute;
+  overflow: visible;
+  top: -250px;
+  left: 0px;
+  z-index: -1;
+  background-image: url('../media/ForAboutPage/back1.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 95%;
+  filter: saturate(150%);
+  /* border: 1px solid white; */
+}
+#background_3{
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -3;
+  background: #181818;
+}
+
+
+/* This part for slide animation  */
+
+#slides_container{
+  animation: slide1 20s infinite;
+}
+@keyframes slide1{
+  0% {
+    background-image: url('../media/ForAboutPage/slide01.jpg'); 
+  }
+  25% {
+    background-image: url('../media/ForAboutPage/slide02.jpg'); 
+  }
+  50% {
+    background-image: url('../media/ForAboutPage/slide03.jpg'); 
+  }
+  75% {
+    background-image: url('../media/ForAboutPage/slide04.jpg');
+  }
+  100% {
+    background-image: url('../media/ForAboutPage/slide01.jpg'); 
+  }
+}
+#background{
+  animation: slide1 20s infinite;
+}
+
