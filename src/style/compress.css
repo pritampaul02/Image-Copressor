@@ -140,7 +140,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .actions .btn {
@@ -150,11 +150,32 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    background: #ffffff74;
-    color: #000;
+    background: #ffffff;
+    color: var(--blue);
     text-shadow: none;
     box-shadow: 5px 5px 10px #0e0e0e4e;
     cursor: pointer;
     outline: none;
     border: none;
+    gap: 0.5rem;
+    transition: all 1s ease-in-out;
 }
+
+.btn-primary {
+    background: var(--yellow) !important;
+    color: var(--blue) !important;
+    font-weight: 500;
+    transition: scale 500ms ease !important;
+}
+.btn:hover,
+.btn-primary:hover {
+    scale: 1.05;
+}
+
+/* .btn p {
+    display: none;
+}
+
+.btn:hover p {
+    display: block;
+} */

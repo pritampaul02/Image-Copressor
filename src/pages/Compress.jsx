@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
+import { IoIosShareAlt } from "react-icons/io";
+import { IoCloudDownloadSharp, IoCloudUploadSharp } from "react-icons/io5";
+
 import bird from "../media/pic1.jpg";
 import spiral from "../media/spiral.svg";
 
 import "../style/compress.css";
-import { HiDownload } from "react-icons/hi";
 
 const Compress = () => {
     const [imageSize, setImageSize] = useState(50);
@@ -35,18 +37,24 @@ const Compress = () => {
                     <p>{imageSize}</p>
                 </div>
                 <div className="actions">
-                    <a href="/" download={true} className="btn">
-                        Download
-                        <HiDownload className="download_icon" />
+                    <a
+                        href="/"
+                        download={true}
+                        className="btn"
+                        title="Download"
+                    >
+                        {/* <p>Download</p> */}
+                        <IoCloudDownloadSharp />
                     </a>
-                    <a href="/" className="btn">
-                        Upload
-                        <HiDownload className="download_icon" />
+                    <a href="/" className="btn" title="Upload">
+                        {/* <p>Upload</p> */}
+                        <IoCloudUploadSharp />
                     </a>
-                    <a href="/" className="btn">
-                        Share
+                    <a href="/" className="btn" title="Share">
+                        {/* <p>Share</p> */}
+                        <IoIosShareAlt />
                     </a>
-                    <button type="submit" className="btn">
+                    <button type="submit" className="btn btn-primary">
                         Compress
                     </button>
                 </div>
