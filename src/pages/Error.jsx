@@ -1,3 +1,4 @@
+
 //import React from "react";
 
 import "../style/error.css";
@@ -21,3 +22,4 @@ const Error = () => {
 };
 
 export default Error;
+

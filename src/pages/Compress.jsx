@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 import bird from "../media/pic1.jpg";
@@ -56,3 +57,4 @@ const Compress = () => {
 };
 
 export default Compress;
+
