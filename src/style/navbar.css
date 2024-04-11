@@ -1,3 +1,4 @@
+
 .navber {
     display: flex;
     align-items: center;
@@ -55,3 +56,4 @@
     border: 2px solid var(--yellow);
     padding: 3px;
 }
+
