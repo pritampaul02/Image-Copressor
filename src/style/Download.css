@@ -1,0 +1,204 @@
+.content {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    /* margin-top: 50px; */
+    /* margin-bottom: 90px;  */
+    padding: 0px 100px 150px 100px; /**/
+}
+#page_info {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+    height: 45px;
+    margin-top: 20px;
+    padding-inline: 20px;
+    border-bottom: 2px solid white;
+    font-weight: 600;
+}
+#your_img {
+    margin-top: 0px;
+    font-size: 30px;
+}
+#show_all {
+    margin-top: 8px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#select_img_conte {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+.select_img {
+    border: 1px solid #6c6b6b;
+    /* height: 340px; */
+    height: 440px;
+    width: 860px;
+    /* width: 510px; */
+    position: relative;
+    background: #ffffff48;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 20px #000000ab;
+    cursor: pointer;
+}
+.img_size {
+    height: 100%;
+    margin: 0px auto;
+}
+.bef_aft_txt {
+    position: absolute;
+    border-radius: 30%;
+    color: black;
+    top: 90%;
+    right: 5%;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px 4px #cbcbcbbb;
+    background: #cbcbcbbb;
+}
+.desc_conte {
+    /* border: 1px solid blue;   */
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-inline: 10px;
+    width: 860px;
+}
+.desc {
+    /* border: 1px solid blue; */
+    text-align: left;
+    /* width: 510px; */
+    padding: 10px 0px 10px 0px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px #000000ab;
+}
+.desc p {
+    margin-bottom: 5px;
+}
+
+#download_shear_conte {
+    width: 510px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 20px;
+}
+.download-shear-botton {
+    height: 40px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: #ffffff2b;
+    text-shadow: none;
+    box-shadow: 5px 5px 10px #0e0e0e4e;
+    cursor: pointer;
+}
+#download-botton {
+    background: white;
+    color: #000000ef;
+}
+.download_icon {
+    font-size: 22px;
+    margin-left: 5px;
+}
+.download_icon:hover {
+    animation: colorflow 0.4s infinite;
+}
+@keyframes colorflow {
+    0% {
+        color: black;
+    }
+    20% {
+        color: #2c2c2c;
+    }
+    40% {
+        color: #484747;
+    }
+    60% {
+        color: #777676;
+    }
+    80% {
+        color: #b8b6b6;
+    }
+    100% {
+        color: #e1e1e1;
+    }
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -360px;
+    left: 0px;
+    z-index: -1;
+    /* background-image: url("../media/pic1.jpg"); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1.7);
+    opacity: 95%;
+    filter: blur(31px) brightness(80%) contrast(110%) saturate(150%);
+}
+
+.secend_content {
+    width: 78%;
+    margin-inline: auto;
+    position: relative;
+    top: -80px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 25px; */
+    columns: 3;
+    column-gap: 25px;
+    break-inside: avoid;
+}
+
+/* .secend_content .img_container {
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 20px #151515e1;
+    cursor: pointer;
+    padding: 0;
+} */
+
+.secend_content img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    box-shadow: 5px 5px 20px #151515e1;
+    margin-bottom: 25px;
+    border-radius: 2%;
+    cursor: pointer;
+}
+.secend_content img:hover {
+    scale: 1.05;
+    transition-duration: 1s;
+}
+
+/* .secend_content img{
+    border-radius: 2%;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 20px #151515e1;
+    cursor: pointer;
+  }
+  .secend_content img:hover{
+    scale: 1.05;
+    transition-duration: 1s;
+  } */

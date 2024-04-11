@@ -1,80 +1,57 @@
 import React, { useState } from "react";
+
+import bird from "../media/pic1.jpg";
+import spiral from "../media/spiral.svg";
+
 import "../style/compress.css";
-
-import bird from "../media/bird.png";
-
-
-
-import blackcar from "../media/blackcar.png";
-import boat from "../media/boat.png";
-import car from "../media/car.png";
-import cars from "../media/cars.png";
-import cottage from "../media/cottage.png";
-import kingfisher from "../media/kingfisher.png";
-import kingfishers from "../media/kingfishers.png";
-import mountain from "../media/mountain.png";
-import nature from "../media/natuer.png";
-import raceingcar from "../media/raceingcar.png";
-import redcar from "../media/redcar.png";
-import river from "../media/river.png";
-import tajmohol from "../media/tajmohol.png";
-import tajsmoon from "../media/tajsmoon.png";
-import whitecar from "../media/whitecar.png";
-
+import { HiDownload } from "react-icons/hi";
 
 const Compress = () => {
-    // const [first, setfirst] = useState(50);
-
-    // let input = document.querySelector("input");
-    // console.log(input.value);
+    const [imageSize, setImageSize] = useState(50);
 
     return (
-       <>
-        <div className="com_contaner">
-            <div className="com_process"> 
-                <img src ={bird} alt = "bird"/>
+        <section className="compressPage">
+            <div className="backgroundStyle"></div>
+            <div className="compressContainer">
+                <div className="beforeImage">
+                    <img src={bird} alt="Your Uploaded Image" />
+                </div>
+                <img src={spiral} alt="spiral" className="spiralSvg" />
+                <div className="afterImage">
+                    <img src={bird} alt="compressed Image" />
+                </div>
             </div>
-            <div className="com_process">
-              <img src ={bird} alt = "bird"/> 
+            <div className="compressActions">
+                <div className="rangeSlider">
+                    <p>min : 50kb</p>
+                    <input
+                        type="range"
+                        min={10}
+                        max={100}
+                        value={imageSize}
+                        onChange={(e) => setImageSize(e.target.value)}
+                        className="sizeChanger"
+                    />
+                    <p>{imageSize}</p>
+                </div>
+                <div className="actions">
+                    <a href="/" download={true} className="btn">
+                        Download
+                        <HiDownload className="download_icon" />
+                    </a>
+                    <a href="/" className="btn">
+                        Upload
+                        <HiDownload className="download_icon" />
+                    </a>
+                    <a href="/" className="btn">
+                        Share
+                    </a>
+                    <button type="submit" className="btn">
+                        Compress
+                    </button>
+                </div>
             </div>
-
-            <input
-                type="range"
-                className="rangeSlider"
-                // value={first}
-                // onChange={setfirst((e) => e.terget.value)}
-            />
-            <button> Compress image </button>  
-        </div>
-
-       <div className="box_body">
-            <p id="your_image">Your images</p>
-             <p id = "show_all"> show all...</p> 
-        </div>
-
-        
-     <div className="box_img">
-          <div className="image">
-                <img src ={blackcar}/> 
-                <img src ={boat}/> 
-                <img src ={kingfisher}/> 
-                <img src ={car}/> 
-                <img src ={cars}/> 
-                <img src ={cottage}/> 
-                <img src ={mountain}/> 
-                <img src ={nature}/> 
-                <img src ={kingfishers}/> 
-                <img src ={raceingcar}/> 
-                <img src ={redcar}/>
-                <img src ={tajsmoon}/> 
-                <img src ={river}/> 
-                <img src ={tajmohol}/>       
-                <img src ={whitecar}/> 
-             </div>    
-        
-        </div>
-
-       </>
+        </section>
     );
 };
 
