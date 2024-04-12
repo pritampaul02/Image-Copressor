@@ -143,9 +143,10 @@
     gap: 0.5rem;
 }
 
-.actions .btn {
+.actions .btn-compress {
     height: 40px;
     width: 100%;
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,18 +159,18 @@
     outline: none;
     border: none;
     gap: 0.5rem;
-    transition: all 1s ease-in-out;
+    /* transition: scale 0.3s ease-in-out; */
 }
 
-.btn-primary {
+.btnCompress-primary {
     background: var(--yellow) !important;
     color: var(--blue) !important;
     font-weight: 500;
-    transition: scale 500ms ease !important;
+    /* transition: scale 0.3s ease-in-out !important; */
 }
-.btn:hover,
-.btn-primary:hover {
-    scale: 1.05;
+.btn-compress:hover,
+.btnCompress-primary:hover {
+    scale: 1.09;
 }
 
 /* .btn p {
