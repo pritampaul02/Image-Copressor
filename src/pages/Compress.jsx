@@ -40,21 +40,24 @@ const Compress = () => {
                     <a
                         href="/"
                         download={true}
-                        className="btn"
+                        className="btn-compress"
                         title="Download"
                     >
                         {/* <p>Download</p> */}
                         <IoCloudDownloadSharp />
                     </a>
-                    <a href="/" className="btn" title="Upload">
+                    <a href="/" className="btn-compress" title="Upload">
                         {/* <p>Upload</p> */}
                         <IoCloudUploadSharp />
                     </a>
-                    <a href="/" className="btn" title="Share">
+                    <a href="/" className="btn-compress" title="Share">
                         {/* <p>Share</p> */}
                         <IoIosShareAlt />
                     </a>
-                    <button type="submit" className="btn btn-primary">
+                    <button
+                        type="submit"
+                        className="btn-compress btnCompress-primary"
+                    >
                         Compress
                     </button>
                 </div>
