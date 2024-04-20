@@ -27,6 +27,7 @@ const Compress = () => {
                 <div className="rangeSlider">
                     <p>min : 50kb</p>
                     <input
+              
                         type="range"
                         min={10}
                         max={100}

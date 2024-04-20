@@ -7,6 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import compress from "../media/compress.png";
 
 import "../style/Home.css";
+import ImageUpload from "./ImageUpload";
 
 const Home = () => {
     return (
@@ -28,6 +29,9 @@ const Home = () => {
                 <Link to="/compress" className="btn">
                     Get Started <MdKeyboardArrowRight className="iconStyle" />
                 </Link>
+
+
+                <ImageUpload />
             </div>
             <img src={compress} alt="compress" />
         </section>
