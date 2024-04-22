@@ -12,6 +12,7 @@ const Navbar = () => {
         <header className="navber">
             <Link to="/" className="logo">
                 Logo
+                
             </Link>
             {/* <div className="menu"> */}
             <div className="menuContainer">
@@ -20,12 +21,14 @@ const Navbar = () => {
                     className={activeLocation === "/" ? "menuActive" : ""}
                 >
                     Home
+                    <span></span>
                 </Link>
                 <Link
                     to="/about"
                     className={activeLocation === "/about" ? "menuActive" : ""}
                 >
                     About
+                    <span></span>
                 </Link>
                 <Link
                     to="/uploaded-images"
@@ -36,10 +39,33 @@ const Navbar = () => {
                     }
                 >
                     Uploaded Image
+                    <span></span>
                 </Link>
+                <Link
+                    to="/login"
+                    className={activeLocation === "/login" ? "menuActive" : ""}
+                >
+                    Login
+                    <span></span>
+                </Link>
+
                 <Link className="profileContainer" to="/">
                     <img src={profile} alt="" />
                 </Link>
+
+                
+                <ul className="menu">
+                    <li className="menu-item">
+                      <Link
+                    to="/profile"
+                    className={activeLocation === "/login" ? "menuActive" : ""}
+                >
+                     Go to profile
+                </Link>
+                </li>
+                    <li className="menu-item">Logout</li>
+                </ul>
+                
             </div>
             {/* </div> */}
         </header>

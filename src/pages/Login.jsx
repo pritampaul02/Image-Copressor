@@ -9,11 +9,11 @@ const Login = () => {
         <>
             <div className="login_page">
                 <div className="login_img">
-                    <div className="img">
+                    <div className="img" id ="googlelogin">
                         <div className="login">
                             <h2>Quick Compressor </h2>
                             <p>Compress your image quickly </p>
-                            <GoogleLogin
+                            <GoogleLogin className="button"
                                 onSuccess={(credentialResponse) => {
                                     console.log(credentialResponse);
                                 }}
@@ -22,6 +22,9 @@ const Login = () => {
                                 }}
                             />
                         </div>
+                    </div>
+                    <div className="img" id ="benifit">
+                        <h2>Login Benifits</h2>
                     </div>
                 </div>
             </div>
