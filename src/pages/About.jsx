@@ -1,7 +1,18 @@
 import React from "react";
 import "../style/About.css";
 import { Link } from "react-router-dom";
+
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { FiMail } from "react-icons/fi";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { FaGoogle } from "react-icons/fa";
+import { SiWhatsapp } from "react-icons/si";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+
 
 import profile1 from "../media/ForAboutPage/profile1.jpg";
 import profile2 from "../media/ForAboutPage/profile2.jpg";
@@ -10,7 +21,7 @@ import profile4 from "../media/ForAboutPage/profile4.jpg";
 
 const About = () => {
     return (
-        <div>
+        <div id="about_page">
             <div id="first_container">
                 <div id="slides_container">
                     <div id="slide">
@@ -28,9 +39,9 @@ const About = () => {
                             the world to us. Thank you for being a part of our
                             community !
                         </p>
-                        <Link to="/compress" className="btn">
-                            Rat Us{" "}
-                            <MdKeyboardArrowRight className="iconStyle" />
+                        <Link to="/compress" className="rat_btn">
+                            Rate Us{" "}
+                            <MdKeyboardArrowRight className="rat_iconStyle" />
                         </Link>
                     </div>
                 </div>
@@ -52,7 +63,7 @@ const About = () => {
                                 Software And Webdeveloper, Graphic Designer,
                                 Photo Video editor
                             </p>
-                            <p id="bio">
+                            <div id="bio">
                                 Hello my name is Susanta Samanta. I am from
                                 Kolkata. I have 1 complete full stack
                                 development experience. I have a basic
@@ -62,13 +73,13 @@ const About = () => {
                                 Panskura Banamali college in West Bengal. My
                                 programming skills are C, C++, Java, Python,
                                 Javascript, Css, Html etc.
-                            </p>
-                            <p id="contact">
-                                <i className="fa-brands fa-google"></i>
-                                <i className="fa-brands fa-github"></i>
-                                <i className="fa-brands fa-square-facebook"></i>
-                                <i className="fa-brands fa-instagram"></i>
-                            </p>
+                            </div>
+                            <div id="persion_contact">
+                                <FiMail className="persion_cont_link_mail"/>
+                                <FaGithub id="persion_cont_link"/>
+                                <FaFacebookSquare id="persion_cont_link"/>
+                                <FiInstagram id="persion_cont_link"/>
+                            </div>
                         </div>
                     </div>
                     <div id="team_card">
@@ -82,8 +93,8 @@ const About = () => {
                                 Software And Webdeveloper, Graphic Designer,
                                 Photo Video editor
                             </p>
-                            <p id="bio">
-                                Hello my name is susanta Samanta. I am from
+                            <div id="bio">
+                                Hello my name is Susanta Samanta. I am from
                                 Kolkata. I have 1 complete full stack
                                 development experience. I have a basic
                                 photo,video editing skill. And also i have some
@@ -92,13 +103,13 @@ const About = () => {
                                 Panskura Banamali college in West Bengal. My
                                 programming skills are C, C++, Java, Python,
                                 Javascript, Css, Html etc.
-                            </p>
-                            <p id="contact">
-                                <i className="fa-brands fa-google"></i>
-                                <i className="fa-brands fa-github"></i>
-                                <i className="fa-brands fa-square-facebook"></i>
-                                <i className="fa-brands fa-instagram"></i>
-                            </p>
+                            </div>
+                            <div id="persion_contact">
+                                <FiMail className="persion_cont_link_mail"/>
+                                <FaGithub id="persion_cont_link"/>
+                                <FaFacebookSquare id="persion_cont_link"/>
+                                <FiInstagram id="persion_cont_link"/>
+                            </div>
                         </div>
                     </div>
                     <div id="team_card">
@@ -112,8 +123,8 @@ const About = () => {
                                 Software And Webdeveloper, Graphic Designer,
                                 Photo Video editor
                             </p>
-                            <p id="bio">
-                                Hello my name is susanta Samanta. I am from
+                            <div id="bio">
+                                Hello my name is Susanta Samanta. I am from
                                 Kolkata. I have 1 complete full stack
                                 development experience. I have a basic
                                 photo,video editing skill. And also i have some
@@ -122,13 +133,13 @@ const About = () => {
                                 Panskura Banamali college in West Bengal. My
                                 programming skills are C, C++, Java, Python,
                                 Javascript, Css, Html etc.
-                            </p>
-                            <p id="contact">
-                                <i className="fa-brands fa-google"></i>
-                                <i className="fa-brands fa-github"></i>
-                                <i className="fa-brands fa-square-facebook"></i>
-                                <i className="fa-brands fa-instagram"></i>
-                            </p>
+                            </div>
+                            <div id="persion_contact">
+                                <FiMail className="persion_cont_link_mail"/>
+                                <FaGithub id="persion_cont_link"/>
+                                <FaFacebookSquare id="persion_cont_link"/>
+                                <FiInstagram id="persion_cont_link"/>
+                            </div>
                         </div>
                     </div>
                     <div id="team_card">
@@ -142,8 +153,8 @@ const About = () => {
                                 Software And Webdeveloper, Graphic Designer,
                                 Photo Video editor
                             </p>
-                            <p id="bio">
-                                Hello my name is susanta Samanta. I am from
+                            <div id="bio">
+                                Hello my name is Susanta Samanta. I am from
                                 Kolkata. I have 1 complete full stack
                                 development experience. I have a basic
                                 photo,video editing skill. And also i have some
@@ -152,13 +163,13 @@ const About = () => {
                                 Panskura Banamali college in West Bengal. My
                                 programming skills are C, C++, Java, Python,
                                 Javascript, Css, Html etc.
-                            </p>
-                            <p id="contact">
-                                <i className="fa-brands fa-google"></i>
-                                <i className="fa-brands fa-github"></i>
-                                <i className="fa-brands fa-square-facebook"></i>
-                                <i className="fa-brands fa-instagram"></i>
-                            </p>
+                            </div>
+                            <div id="persion_contact">
+                                <FiMail className="persion_cont_link_mail"/>
+                                <FaGithub id="persion_cont_link"/>
+                                <FaFacebookSquare id="persion_cont_link"/>
+                                <FiInstagram id="persion_cont_link"/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,12 +178,12 @@ const About = () => {
             <div id="third_container">
                 <h1>Contact Us</h1>
                 <div id="contact_link_container">
-                    <div id="logo_container">G</div>
-                    <div id="logo_container">W</div>
-                    <div id="logo_container">X</div>
-                    <div id="logo_container">F</div>
-                    <div id="logo_container">I</div>
-                    <div id="logo_container">in</div>
+                    <div id="logo_container"><FaGoogle /></div>
+                    <div id="logo_container"><SiWhatsapp /></div>
+                    <div id="logo_container"><FaXTwitter /></div>
+                    <div id="logo_container"><FaFacebookF /></div>
+                    <div id="logo_container"><FiInstagram /></div>
+                    <div id="logo_container"><FaLinkedinIn /></div>
                 </div>
                 <p>Terms of Service</p>
                 <p>Privacy Policy</p>
