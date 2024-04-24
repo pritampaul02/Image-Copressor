@@ -167,6 +167,7 @@
     columns: 3;
     column-gap: 25px;
     break-inside: avoid;
+   
 }
 
 /* .secend_content .img_container {
@@ -185,6 +186,7 @@
     margin-bottom: 25px;
     border-radius: 2%;
     cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 .secend_content img:hover {
     scale: 1.05;

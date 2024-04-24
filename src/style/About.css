@@ -1,3 +1,9 @@
+#about_page{
+  height: 1420px;
+  overflow: hidden;
+  width: 100%;
+  /* border: 1px solid red; */
+}
 
 #first_container {
   height: 470px;
@@ -14,7 +20,7 @@
 #slides_container {
   height: 320px;
   width: 100%;
-  background: url('../media/ForAboutPage/pic2.jpg');
+  /* background: url('../media/ForAboutPage/pic2.jpg'); */
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -39,34 +45,38 @@
 }
 #slide p{
   color: #c0c0c0;
-  line-height: 18px;
+  line-height: 1.2vw;
   font-weight: 500;
+  font-size: 1vw;
 }
 
-.btn {
-  background-color: var(--blue);
+.rat_btn {
   width: fit-content;
   margin-top: 20px;
   padding: 10px 15px;
-  border-radius: 5px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--yellow);
   font-size: 17px;
+  color: var(--lightBlack);
+  font-weight: 800;
+  border-radius: 5px;
 }
 
-.iconStyle {
+.rat_iconStyle {
   font-size: 25px;
   transition: all 0.3s ease;
 }
 
-.btn:hover {
+.rat_btn:hover {
   background-color: var(--blueHover);
+  color: var(--gray);
   /* transform: scale(1.02); */
 }
 
-.btn:hover .iconStyle {
+.rat_btn:hover .rat_iconStyle {
   transform: translateX(5px);
 }
 
@@ -78,7 +88,7 @@
   position: absolute;
   top: -125px;
   z-index: -1;
-  background-image: url('../media/ForAboutPage/pic2.jpg');
+  /* background-image: url('../media/ForAboutPage/pic2.jpg'); */
   background-size: 100%;
   background-position: center;
   transform: scale(1.1);
@@ -146,11 +156,21 @@
   color: #c0c0c0;
 }
 
-#contact i {
+#persion_contact{
+  width: 130px;
+  display: flex;
+  align-items: center;
   font-size: 20px;
   margin-top: 10px;
-  margin-right: 8px;
 }
+#persion_cont_link{
+  margin-right: 15px;
+}
+.persion_cont_link_mail{
+  font-size: 25px;
+  margin-right: 15px;
+}
+
 
 #third_container{
   width: 100%;
@@ -172,11 +192,12 @@
 #logo_container{
   height: 50px;
   width: 50px;
-  background: #dedede3b;
-  backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-size: 25px;
+  background: #dedede3b;
+  backdrop-filter: blur(5px);
   border-radius: 50%;
 }
 #third_container p{
