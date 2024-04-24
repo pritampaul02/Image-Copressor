@@ -3,11 +3,25 @@ import { Link, useLocation } from "react-router-dom";
 import profile from "../media/image.png";
 
 import "../style/navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../redux/slices/userSlice";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
 	const activeLocation = useLocation().pathname;
 	const [isOpen, setIsOpen] = useState(false);
+
+	const { isAuthenticated, status } = useSelector(selectUser);
+
+	console.log("akkaka", isAuthenticated);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		if (status.logoutStatus === "success") {
+			toast.success("Logout Success");
+		}
+	}, [isAuthenticated]);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -39,14 +53,20 @@ const Navbar = () => {
 					Uploaded Image
 					<span></span>
 				</Link>
-				<Link
-					to='/login'
-					className={activeLocation === "/login" ? "menuActive" : ""}
-				>
-					Login
-					<span></span>
-				</Link>
 
+				{isAuthenticated ? (
+					<li onClick={() => dispatch(logout())} className='menu-item'>
+						Logout
+					</li>
+				) : (
+					<Link
+						to='/login'
+						className={activeLocation === "/login" ? "menuActive" : ""}
+					>
+						Login
+						<span></span>
+					</Link>
+				)}
 				<Link onClick={toggleMenu} className='profileContainer' to='/'>
 					<img src={profile} alt='' />
 				</Link>
@@ -60,7 +80,6 @@ const Navbar = () => {
 							Go to profile
 						</Link>
 					</li>
-					<li className='menu-item'>Logout</li>
 				</ul>
 			</div>
 			{/* </div> */}
