@@ -4,43 +4,43 @@ import login from "../media/login.png";
 import google from "../media/google.png";
 import "../style/login.css";
 import { jwtDecode } from "jwt-decode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { register, selectUser } from "../redux/slices/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [profilePic, setProfilePic] = useState("");
+	const dispatch = useDispatch();
 
-	const register = async () => {
-		try {
-            console.log('registre');
-			const res = await axios.post(
-				"http://localhost:8080/api/user/google/signup",
-				{
-					name,
-					email,
-					profilePic,
-				}
-			);
-			console.log(res.data);
-		} catch (error) {
-			console.log(error.message);
-		}
+	const { isAuthenticated } = useSelector(selectUser);
+	const navigate = useNavigate()
+
+	useEffect(() => {
+		if (isAuthenticated) {
+            navigate('/')
+        }
+		console.log(profilePic);
+	}, [isAuthenticated, profilePic]);
+
+	const handleRegister = () => {
+		console.log("log");
+		dispatch(register({ name, email, profilePic }));
 	};
 
 	const handleSignup = (credentialResponse) => {
 		let decoded = jwtDecode(credentialResponse.credential);
 		let name2 = decoded.given_name + " " + decoded.family_name;
 
+		setName(name2);
+		setEmail(decoded.email);
+		setProfilePic(decoded.picture);
+		register();
 
-        setName(name2)
-        setEmail(decoded.email)
-        setProfilePic(decoded.picture)
-        register()
-
-
-		// register()
+		handleRegister();
 		console.log();
 	};
 

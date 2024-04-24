@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "../redux/slices/userSlice";
 
 const Profile = () => {
-  return (
-    <div>Profile</div>
-  )
-}
+	const { user } = useSelector(selectUser);
+  useEffect(() => {
+    
+  }, [user])
+  
+	return (
+		<div>
+			<h1>profile</h1>
+			<h1>{user?.name}</h1>
+		</div>
+	);
+};
 
-export default Profile
+export default Profile;

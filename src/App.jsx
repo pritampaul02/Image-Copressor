@@ -14,26 +14,29 @@ import Feedback from "./pages/Feedback";
 import Profile from "./pages/Profile";
 import { useEffect } from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getProfile, selectUser } from "./redux/slices/userSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
-	const connectServer = async () => {
-		try {
-			const res = await axios.get("http://localhost:8080");
-			console.log(res.data);
-		} catch (error) {
-			console.log(error.message);
-		}
+	const dispatch = useDispatch();
+	const { user, isAuthenticated } = useSelector(selectUser);
+
+	const getProfileInformation = async () => {
+		dispatch(getProfile());
 	};
 
 	useEffect(() => {
-		console.log("Mounted");
-		connectServer();
-	}, []);
+		if (isAuthenticated === true) {
+			toast.success(`Loged in as ${user.name}`);
+		}
+		getProfileInformation();
+	}, [isAuthenticated]);
 
 	return (
 		<Router>
 			<Navbar />
-
+			<Toaster />
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />

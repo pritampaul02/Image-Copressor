@@ -14,3 +14,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 		</Provider>
 	</GoogleOAuthProvider>
 );
+
+export const base_url = "http://localhost:8080";
