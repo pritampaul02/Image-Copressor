@@ -10,24 +10,47 @@ import "../style/compress.css";
 
 const Compress = () => {
     const [imageSize, setImageSize] = useState(50);
+    const [uploadedImage, setUploadedImage] = useState(
+        "https://www.pngkit.com/png/full/129-1298005_png-file-upload-image-icon-png.png"
+    );
+    const [compressedImage, setCompressedImage] = useState(
+        "https://cdn3.iconfinder.com/data/icons/files-folders-2/30/file_text_document_page_paper-broken-damaged-128.png"
+    );
 
     return (
         <section className="compressPage">
             <div className="backgroundStyle"></div>
             <div className="compressContainer">
                 <div className="beforeImage">
-                    <img src={bird} alt="Your Uploaded Image" />
+                    <img
+                        src={uploadedImage}
+                        style={
+                            uploadedImage ===
+                            "https://www.pngkit.com/png/full/129-1298005_png-file-upload-image-icon-png.png"
+                                ? { width: "60px", height: "auto" }
+                                : {}
+                        }
+                        alt="Your Uploaded Image"
+                    />
                 </div>
                 <img src={spiral} alt="spiral" className="spiralSvg" />
                 <div className="afterImage">
-                    <img src={bird} alt="compressed Image" />
+                    <img
+                        src={compressedImage}
+                        style={
+                            compressedImage ===
+                            "https://cdn3.iconfinder.com/data/icons/files-folders-2/30/file_text_document_page_paper-broken-damaged-128.png"
+                                ? { width: "60px", height: "auto" }
+                                : {}
+                        }
+                        alt="Your Uploaded Image"
+                    />
                 </div>
             </div>
             <div className="compressActions">
                 <div className="rangeSlider">
                     <p>min : 50kb</p>
                     <input
-              
                         type="range"
                         min={10}
                         max={100}

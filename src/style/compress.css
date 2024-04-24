@@ -50,7 +50,8 @@
 .compressContainer .afterImage {
     height: 460px;
     /* width: calc(50vw - 50px); */
-    width: 100%;
+    /* width: 100%; */
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,8 +70,8 @@
 }
 .compressContainer .beforeImage img,
 .compressContainer .afterImage img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
