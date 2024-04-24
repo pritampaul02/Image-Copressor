@@ -1,4 +1,12 @@
 
+
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
 .navber {
     display: flex;
     align-items: center;
