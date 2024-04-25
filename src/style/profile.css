@@ -1,0 +1,33 @@
+.profile{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%,rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+   
+}
+
+.profile_box{
+    height: 400px;
+    width: 350px;
+    border: 2px solid;
+    border-left-color: blue;
+    border-right-color: blue;
+    border-top-color: #ec45f2;
+    border-bottom-color: #ec45f2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    left: 350px;
+}
+
+.profile_box .profile_image{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid ;
+    position: absolute;
+    top: 5px;
+}
