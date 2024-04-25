@@ -62,7 +62,8 @@ const Login = () => {
 						</div>
 					</div>
 					<div className='img' id='benifit'>
-						<h2>Login Benifits</h2>
+					    <h3>you will get the following benefits if you login</h3>
+						<p>First you will see all the compresed images in album from</p>
 					</div>
 				</div>
 			</div>
