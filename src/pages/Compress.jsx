@@ -2,20 +2,18 @@ import React, { useState } from "react";
 
 import { IoIosShareAlt } from "react-icons/io";
 import { IoCloudDownloadSharp, IoCloudUploadSharp } from "react-icons/io5";
+import addImage from "../media/129-1298005_png-file-upload-image-icon-png.png";
+import noImage from "../media/1174483.png";
 
-import bird from "../media/pic1.jpg";
+// import bird from "../media/pic1.jpg";
 import spiral from "../media/spiral.svg";
 
 import "../style/compress.css";
 
 const Compress = () => {
     const [imageSize, setImageSize] = useState(50);
-    const [uploadedImage, setUploadedImage] = useState(
-        "https://www.pngkit.com/png/full/129-1298005_png-file-upload-image-icon-png.png"
-    );
-    const [compressedImage, setCompressedImage] = useState(
-        "https://cdn3.iconfinder.com/data/icons/files-folders-2/30/file_text_document_page_paper-broken-damaged-128.png"
-    );
+    const [uploadedImage, setUploadedImage] = useState(addImage);
+    const [compressedImage, setCompressedImage] = useState(noImage);
 
     return (
         <section className="compressPage">
@@ -25,8 +23,7 @@ const Compress = () => {
                     <img
                         src={uploadedImage}
                         style={
-                            uploadedImage ===
-                            "https://www.pngkit.com/png/full/129-1298005_png-file-upload-image-icon-png.png"
+                            uploadedImage === addImage
                                 ? { width: "60px", height: "auto" }
                                 : {}
                         }
@@ -38,8 +35,7 @@ const Compress = () => {
                     <img
                         src={compressedImage}
                         style={
-                            compressedImage ===
-                            "https://cdn3.iconfinder.com/data/icons/files-folders-2/30/file_text_document_page_paper-broken-damaged-128.png"
+                            compressedImage === noImage
                                 ? { width: "60px", height: "auto" }
                                 : {}
                         }
