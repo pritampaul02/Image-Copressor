@@ -4,6 +4,7 @@ import { IoIosShareAlt } from "react-icons/io";
 import { IoCloudDownloadSharp, IoCloudUploadSharp } from "react-icons/io5";
 import addImage from "../media/129-1298005_png-file-upload-image-icon-png.png";
 import noImage from "../media/1174483.png";
+import imageCompression from "browser-image-compression";
 
 // import bird from "../media/pic1.jpg";
 import spiral from "../media/spiral.svg";
@@ -14,6 +15,35 @@ const Compress = () => {
     const [imageSize, setImageSize] = useState(50);
     const [uploadedImage, setUploadedImage] = useState(addImage);
     const [compressedImage, setCompressedImage] = useState(noImage);
+
+    const [imageData, setImageData] = useState("");
+    // const [imgPreview, setImgPreview] = useState('/vite.svg')
+
+    const handleImageUpload = async (event) => {
+        const imageFile = event.target.files[0];
+
+        const options = {
+            maxSizeMB: 1,
+            maxWidthOrHeight: 1920,
+            useWebWorker: true,
+        };
+        try {
+            const compressedFile = await imageCompression(imageFile, options);
+
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                // Set the result of the FileReader to the state variable
+                setImageData(e.target.result);
+                setUploadedImage(e.target.result);
+                console.log(e.target.result);
+            };
+
+            reader.readAsDataURL(compressedFile);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <section className="compressPage">
@@ -43,7 +73,22 @@ const Compress = () => {
                     />
                 </div>
             </div>
+
             <div className="compressActions">
+                <input
+                    type="file"
+                    multiple="false"
+                    onChange={handleImageUpload}
+                    id="imageUploadBtn"
+                    hidden
+                />
+                <label htmlFor="imageUploadBtn" className="image_uploader">
+                    Upload{" "}
+                    <span>
+                        {uploadedImage !== addImage ? ` ${uploadedImage}` : ""}
+                    </span>
+                </label>
+
                 <div className="rangeSlider">
                     <p>min : 50kb</p>
                     <input
@@ -56,6 +101,7 @@ const Compress = () => {
                     />
                     <p>{imageSize}</p>
                 </div>
+
                 <div className="actions">
                     <a
                         href="/"
@@ -66,14 +112,26 @@ const Compress = () => {
                         {/* <p>Download</p> */}
                         <IoCloudDownloadSharp />
                     </a>
-                    <a href="/" className="btn-compress" title="Upload">
+                    <button
+                        onClick={() => {
+                            console.log("Image Uploaded");
+                        }}
+                        className="btn-compress"
+                        title="Upload"
+                    >
                         {/* <p>Upload</p> */}
                         <IoCloudUploadSharp />
-                    </a>
-                    <a href="/" className="btn-compress" title="Share">
+                    </button>
+                    <button
+                        onClick={() => {
+                            console.log("Image shared");
+                        }}
+                        className="btn-compress"
+                        title="Share"
+                    >
                         {/* <p>Share</p> */}
                         <IoIosShareAlt />
-                    </a>
+                    </button>
                     <button
                         type="submit"
                         className="btn-compress btnCompress-primary"

@@ -30,8 +30,7 @@ const Home = () => {
                     Get Started <MdKeyboardArrowRight className="iconStyle" />
                 </Link>
 
-
-                <ImageUpload />
+                {/* <ImageUpload /> */}
             </div>
             <img src={compress} alt="compress" />
         </section>

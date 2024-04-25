@@ -6,18 +6,12 @@ const Error = () => {
     return (
         <section classNmae="page_404">
             <div className="page_404-container">
-                         
-            <h1 className="text-center "> 404 </h1>
-                <div className="four_zero_four">
-                    </div>
-                               
-                     <div  className="link_404" >
-                           
-                     <a href="/">
-                                Go to Home
-                            </a>
-                   </div> 
-            
+                <p className="text-center "> 404 </p>
+                <div className="four_zero_four"></div>
+
+                <a href="/" className="link_404">
+                    Go to Home
+                </a>
             </div>
         </section>
     );

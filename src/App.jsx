@@ -19,38 +19,38 @@ import { getProfile, selectUser } from "./redux/slices/userSlice";
 import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
-	const dispatch = useDispatch();
-	const { user, isAuthenticated } = useSelector(selectUser);
+    const dispatch = useDispatch();
+    const { user, isAuthenticated } = useSelector(selectUser);
 
-	const getProfileInformation = async () => {
-		dispatch(getProfile());
-	};
+    const getProfileInformation = async () => {
+        dispatch(getProfile());
+    };
 
-	useEffect(() => {
-		if (isAuthenticated === true) {
-			toast.success(`Loged in as ${user.name}`);
-		}
-		getProfileInformation();
-	}, [isAuthenticated]);
+    useEffect(() => {
+        if (isAuthenticated === true) {
+            toast.success(`Loged in as ${user.name}`);
+        }
+        getProfileInformation();
+    }, [isAuthenticated]);
 
-	return (
-		<Router>
-			<Navbar />
-			<Toaster />
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/about' element={<About />} />
-				<Route path='/compress' element={<Compress />} />
-				<Route path='/uploaded-images' element={<Download />} />
-				<Route path='/login' element={<Login />} />
-				<Route path='/*' element={<Error />} />
-				<Route path='/feedback' element={<Feedback />} />
-				<Route path='/profile' element={<Profile />} />
-			</Routes>
+    return (
+        <Router>
+            <Navbar />
+            <Toaster />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/compress" element={<Compress />} />
+                <Route path="/uploaded-images" element={<Download />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/*" element={<Error />} />
+            </Routes>
 
-			<Footer />
-		</Router>
-	);
+            <Footer />
+        </Router>
+    );
 };
 
 export default App;
