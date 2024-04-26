@@ -1,30 +1,70 @@
-#homePage {
-    /* background-color: var(--lightBlack); */
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 150px;
-    gap: 100px;
-    height: calc(100vh - 95px);
+:root {
+   --home-page-content-back: #2e2e2eb6;
+   --hone-page-p-color: #e6e6e6fc;
 }
 
-.container {
+
+#homepage{
+    width: 100%;
+    height: auto;
+    /* background: #141414; */
+   /* background: url('home back 2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    /* color: white; */
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
+    align-items: center;   
+  }
 
-.container > h1 {
-    font-size: 25px;
+  #home-1st-content{
+    height: 450px;
+    width: 1300px;
+    margin-top: 40px;
+    padding: 80px;
+    overflow: hidden;
+    background: var(--home-page-content-back);
+    backdrop-filter: blur(30px);
+    display: flex;
+    border-radius: 40px;
+  /*  border: 1px solid red; */
+  }
+  #homepage_heading_container{
+    width: 60%;
     text-align: justify;
-}
-.container > p {
-    font-size: 16px;
-    text-align: justify;
-}
+   /* border: 1px solid green; */
+  }
+  #homepage_heading_container h1{
+    margin-top: -15px;
+    font-size: 28px;
+    font-weight: 800;
+    text-shadow: 3px 3px 4px #0000009b;
+    color: white;
+    /*  border: 1px solid blue;*/
+  }
+  #homepage_heading_container p{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--hone-page-p-color);
+    text-shadow: 2px 2px 2px #0000009b;
+  }
+  #homepage_img_container{
+    width: 40%;
+   /* border: 1px solid red; */
+  }
+  #homepage_img_container img{
+    width: 90%;
+    position: relative;
+    left: 65px;
+    top: -65px;
+    filter: drop-shadow( 0px 0px 80px #0d4fd492);
+  }
 .btn {
-    background-color: var(--blue);
+    background-color: skyblue;
+    /* background-color: var(--blue); */
+    color: #000;
     width: fit-content;
     padding: 10px 15px;
     border-radius: 5px;
@@ -33,18 +73,105 @@
     align-items: center;
     justify-content: center;
     font-size: 17px;
+    font-weight: 800;
+    margin-top: 35px;
 }
 
 .iconStyle {
+    margin-top: 1px;
     font-size: 25px;
     transition: all 0.3s ease;
 }
 
 .btn:hover {
     background-color: var(--blueHover);
+    color: white;
     /* transform: scale(1.02); */
 }
 
 .btn:hover .iconStyle {
     transform: translateX(5px);
 }
+
+
+
+#home-2nd-content{
+    height: auto;
+    width: 1300px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding: 40px 80px 40px 80px;
+    background: var(--home-page-content-back);
+    backdrop-filter: blur(30px);
+    border-radius: 40px;
+   /* border: 1px solid red; */
+  }
+  #home-2nd-content h1{
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 3px 3px 4px #0000009b;
+    color: white;
+  }
+  #home_features_container{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   /* border: 1px solid green; */
+  }
+  #home_features_card{
+    height: auto;
+    width: 49%;
+    padding-block: 20px;
+    display: flex;
+   /* border: 1px solid red; */
+  }
+  #home_features_img{
+    width: 224px;
+    height: 126px;
+    /* border: 1px solid #ffffffb8; */
+    box-shadow: 2px 2px 20px #0000009b;
+    border-radius: 10px;
+  }
+  #home_features_card_dsc{
+    padding-inline: 20px;
+    color: white;
+    /* border: 1px solid red; */
+}
+#home_features_card h2{
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 3px 3px 4px #0000009b;
+    color: white;
+    margin-bottom: 10px;
+}
+#home_features_card p{
+    font-weight: 500;
+    text-align: justify;
+    text-shadow: 2px 2px 2px #0000009b;
+    color: var(--hone-page-p-color);
+  }
+  
+  #home_back{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -2;
+    background: url('../media/ForHomepage/back 4.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    background-size: cover;
+    transform: scale(1);
+    filter: blur(5px) brightness(40%) contrast(110%); 
+  }
+  
+
+
+
+
+  
