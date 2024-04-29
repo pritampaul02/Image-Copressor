@@ -1,4 +1,9 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+	Route,
+	BrowserRouter as Router,
+	Routes,
+	useNavigate,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -17,40 +22,45 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getProfile, selectUser } from "./redux/slices/userSlice";
 import toast, { Toaster } from "react-hot-toast";
+import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => {
-    const dispatch = useDispatch();
-    const { user, isAuthenticated } = useSelector(selectUser);
+	const dispatch = useDispatch();
+	const { user, isAuthenticated } = useSelector(selectUser);
 
-    const getProfileInformation = async () => {
-        dispatch(getProfile());
-    };
+	const getProfileInformation = async () => {
+		dispatch(getProfile());
+	};
 
-    useEffect(() => {
-        if (isAuthenticated === true) {
-            toast.success(`Loged in as ${user.name}`);
-        }
-        getProfileInformation();
-    }, [isAuthenticated]);
+	useEffect(() => {
+		if (isAuthenticated === true) {
+			toast.success(`Loged in as ${user.name}`);
+		}
+		getProfileInformation();
+	}, [isAuthenticated]);
 
-    return (
-        <Router>
-            <Navbar />
-            <Toaster />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/compress" element={<Compress />} />
-                <Route path="/uploaded-images" element={<Download />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/feedback" element={<Feedback />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/*" element={<Error />} />
-            </Routes>
+	return (
+		<Router>
+			<Navbar />
+			<Toaster />
+			<Routes>
+				<Route element={<ProtectedRoute />}>
+					<Route path='/compress' element={<Compress />} />
+					<Route path='/uploaded-images' element={<Download />} />
+					<Route path='/feedback' element={<Feedback />} />
 
-            <Footer />
-        </Router>
-    );
+					<Route path='/profile' element={<Profile />} />
+				</Route>
+
+				<Route path='/' element={<Home />} />
+				<Route path='/about' element={<About />} />
+				<Route path='/login' element={<Login />} />
+				<Route path='/*' element={<Error />} />
+			</Routes>
+
+			<Footer />
+		</Router>
+	);
 };
 
 export default App;
