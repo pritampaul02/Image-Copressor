@@ -5,6 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 import compress from "../media/compress.png";
+import compress02 from "../media/ForHomepage/compress 02.png";
+import feature1 from "../media/ForHomepage/features 01.jpg";
+import feature2 from "../media/ForHomepage/features 02.jpg";
+import feature3 from "../media/ForHomepage/features 03.jpg";
+import feature4 from "../media/ForHomepage/features 04.jpg";
+
 
 import "../style/Home.css";
 import ImageUpload from "./ImageUpload";
@@ -12,6 +18,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../redux/slices/userSlice";
 
 const Home = () => {
+
     const navigate = useNavigate();
 	const { user, isAuthenticated } = useSelector(selectUser);
 
