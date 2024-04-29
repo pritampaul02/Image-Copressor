@@ -1,11 +1,8 @@
 //import React from 'react'
 import { GoogleLogin } from "@react-oauth/google";
-import login from "../media/login.png";
-import google from "../media/google.png";
 import "../style/login.css";
 import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { register, selectUser } from "../redux/slices/userSlice";
 import { useNavigate } from "react-router-dom";
@@ -23,12 +20,13 @@ const Login = () => {
 		if (isAuthenticated) {
             navigate('/')
         }
-		console.log(profilePic);
+		handleRegister()
 	}, [isAuthenticated, profilePic]);
 
 	const handleRegister = () => {
-		console.log("log");
-		dispatch(register({ name, email, profilePic }));
+		if (name && email && profilePic) {
+			dispatch(register({ name, email, profilePic }));
+		}
 	};
 
 	const handleSignup = (credentialResponse) => {
@@ -38,10 +36,6 @@ const Login = () => {
 		setName(name2);
 		setEmail(decoded.email);
 		setProfilePic(decoded.picture);
-		register();
-
-		handleRegister();
-		console.log();
 	};
 
 	return (
