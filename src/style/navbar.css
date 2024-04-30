@@ -23,9 +23,14 @@
     z-index: 10;
 }
 
-.logo {
-    font-size: 25px;
-    font-weight: bold;
+.logo_container {
+    width: auto;
+    height: 100%;
+    text-decoration: none;
+}
+.logo_container .logo {
+    width: auto;
+    height: 100%;
 }
 /* .menu{
     display: flex;

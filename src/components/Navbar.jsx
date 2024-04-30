@@ -9,87 +9,100 @@ import { logout, selectUser } from "../redux/slices/userSlice";
 import toast from "react-hot-toast";
 import { IoMdLogOut } from "react-icons/io";
 import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
+import logo from "../media/logo.png";
 
 const Navbar = () => {
-	const activeLocation = useLocation().pathname;
-	// const [isOpen, setIsOpen] = useState(false);
+    const activeLocation = useLocation().pathname;
+    // const [isOpen, setIsOpen] = useState(false);
 
-	const { isAuthenticated, status, user } = useSelector(selectUser);
+    const { isAuthenticated, status, user } = useSelector(selectUser);
 
-	console.log("akkaka", isAuthenticated);
-	const dispatch = useDispatch();
-	console.log(user);
-	const navigate = useNavigate();
+    console.log("akkaka", isAuthenticated);
+    const dispatch = useDispatch();
+    console.log(user);
+    const navigate = useNavigate();
 
-	useEffect(() => {
-		if (status.logoutStatus === "success") {
-			toast.success("Logout Success");
-		}
-		if (!isAuthenticated) {
-			navigate("/compress");
-		}
-	}, [isAuthenticated]);
+    useEffect(() => {
+        if (status.logoutStatus === "success") {
+            toast.success("Logout Success");
+        }
+        if (!isAuthenticated) {
+            navigate("/compress");
+        }
+    }, [isAuthenticated]);
 
-	// const toggleMenu = () => {
-	//     setIsOpen(!isOpen);
-	//     console.log(isOpen);
-	// };
+    // const toggleMenu = () => {
+    //     setIsOpen(!isOpen);
+    //     console.log(isOpen);
+    // };
 
-	return (
-		<header className='navber'>
-			<Link to='/' className='logo'>
-				Logo
-			</Link>
-			{/* <div className="menu"> */}
-			<div className='menuContainer'>
-				{/* <Link
+    return (
+        <header className="navber">
+            <Link to="/" className="logo_container">
+                <img
+                    src={logo}
+                    alt="Compresso - The ultimate image compressor"
+                    className="logo"
+                />
+            </Link>
+            {/* <div className="menu"> */}
+            <div className="menuContainer">
+                {/* <Link
                     to="/"
                     className={activeLocation === "/" ? "menuActive" : ""}
                 >
                     Home
                     <span></span>
                 </Link> */}
-				<Link
-					to='/about'
-					className={activeLocation === "/about" ? "menuActive" : ""}
-				>
-					About
-					<span></span>
-				</Link>
-				<Link
-					to='/uploaded-images'
-					className={activeLocation === "/uploaded-images" ? "menuActive" : ""}
-				>
-					Uploaded Image
-					<span></span>
-				</Link>
+                <Link
+                    to="/about"
+                    className={activeLocation === "/about" ? "menuActive" : ""}
+                >
+                    About
+                    <span></span>
+                </Link>
+                <Link
+                    to="/uploaded-images"
+                    className={
+                        activeLocation === "/uploaded-images"
+                            ? "menuActive"
+                            : ""
+                    }
+                >
+                    Uploaded Image
+                    <span></span>
+                </Link>
 
-				{isAuthenticated ? (
-					<li onClick={() => dispatch(logout())} className='loginBtn'>
-						<BiLogOutCircle style={{ marginRight: "5px", fontWeight: "700" }} />{" "}
-						Logout
-					</li>
-				) : (
-					<Link to='/login' className='loginBtn'>
-						<BiLogInCircle style={{ marginRight: "5px", fontWeight: "700" }} />{" "}
-						Login
-						<span></span>
-					</Link>
-				)}
-				<Link
-					// onClick={toggleMenu}
-					className='profileContainer'
-					to='/profile'
-				>
-					{isAuthenticated ? (
-						<img src={user.profilePic} alt='' />
-					) : (
-						<img src={profile} alt='' />
-					)}
-				</Link>
+                {isAuthenticated ? (
+                    <li onClick={() => dispatch(logout())} className="loginBtn">
+                        <BiLogOutCircle
+                            style={{ marginRight: "5px", fontWeight: "700" }}
+                        />{" "}
+                        Logout
+                    </li>
+                ) : (
+                    <Link to="/login" className="loginBtn">
+                        <BiLogInCircle
+                            style={{ marginRight: "5px", fontWeight: "700" }}
+                        />{" "}
+                        Login
+                        <span></span>
+                    </Link>
+                )}
+                <Link
+                    // onClick={toggleMenu}
+                    className="profileContainer"
+                    to="/profile"
+                >
+                    {isAuthenticated ? (
+                        <img src={user.profilePic} alt="" />
+                    ) : (
+                        <img src={profile} alt="" />
+                    )}
+                </Link>
 
-				{/* <ul className={`menu  ${isOpen ? "show" : "hidden"}`}> */}
-				{/* <li className='menu-item'>
+                {/* <ul className={`menu  ${isOpen ? "show" : "hidden"}`}> */}
+                {/* <li className='menu-item'>
 						<Link
 							to='/profile'
 							className={activeLocation === "/login" ? "menuActive" : ""}
@@ -97,11 +110,11 @@ const Navbar = () => {
 							Go to profile
 						</Link>
 					</li> */}
-				{/* </ul> */}
-			</div>
-			{/* </div> */}
-		</header>
-	);
+                {/* </ul> */}
+            </div>
+            {/* </div> */}
+        </header>
+    );
 };
 
 export default Navbar;
