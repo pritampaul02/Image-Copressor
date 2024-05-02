@@ -19,7 +19,17 @@ import profile2 from "../media/ForAboutPage/profile2.jpg";
 import profile3 from "../media/ForAboutPage/profile3.jpg";
 import profile4 from "../media/ForAboutPage/profile4.jpg";
 
+import { useEffect, useState } from "react";
+
 const About = () => {
+
+const [isOpen, setIsOpen] = useState(false);    
+     const toggleMenu = () => {
+             setIsOpen(!isOpen);
+             console.log(Open);
+        };
+     
+
     return (
         <div id="about_page">
             <div id="first_container">
@@ -39,10 +49,12 @@ const About = () => {
                             the world to us. Thank you for being a part of our
                             community !
                         </p>
-                        <Link to="/compress" className="rat_btn">
+                        <Link onClick={toggleMenu} 
+                           to=" " className="rat_btn" >
                             Rate Us{" "}
                             <MdKeyboardArrowRight className="rat_iconStyle" />
                         </Link>
+                        <div className={`about_feedback  ${isOpen ? "show" : "hidden"}`}> </div>
                     </div>
                 </div>
 

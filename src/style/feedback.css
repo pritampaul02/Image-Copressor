@@ -1,9 +1,9 @@
-.feedback{
+.feedback_section{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 92vh;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%,rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+   /* background: linear-gradient(90deg, rgba(2,0,.6,1) 0%,rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
    
 }
 .feedback h2{
@@ -23,7 +23,8 @@
     height: 60px;
     border-radius: 50%;
     background-color: transparent;
-    border: 6px solid rgba(255,255,255,0.8);;
+    background: rgb(77, 76, 76);
+    border: 6px solid rgba(255,255,255,0.8);
 }
 .box-size div:nth-child(1){
     top: 12%;
@@ -136,21 +137,81 @@
         opacity: 0;
     }
 }
-.wrapper{
+/*.feedback_box{
     max-height: 220px;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
     position: absolute;
     top: 25%;
+}*/
+
+.feedback_box{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border: solod black;
+    overflow: hidden;
+    background-image: url("../media/butterfly.png");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
-.wrapper .box-item{
-   min-height: 210px;  
-   height: 210px;
-   width: 150px;  
+.feedback_content{
+   height: 550px;
+   width: 630px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+ .feedback_content .feed_paragraph{
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: "Arvo", serif !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: -95px;
+    color: white;
+}
+
+#feedback{
+    backdrop-filter: blur(5px);
+}
+
+.feedback_box .box{
+   
+   height: 170px;
+   width: 40%;  
    text-align: center;
-   background-color: red;
-   border: solid black;
-   justify-content: center;
+   /*border: 4px solid rgba(255, 255, 255, 0.5);*/
+   border: 4px solid black;
+   justify-content: space-evenly;
+   margin-left: 30px;
+   margin-top: 5px;
+   background-color: rgb(77, 75, 75);
+}
+
+.feedback_content #email{
+    font-weight: bolder;
+    font-size: 16px;
+    margin-left: 32px;  
+}
+
+.feedback_content .box .box-image{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: solid blue;
+    margin-left: 5px;
+    margin-top: -4px;
+}
+
+.box .box_content p{
+    font-size: 15px;
 }

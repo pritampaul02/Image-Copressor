@@ -5,7 +5,7 @@ import { Navigate, Outlet } from "react-router-dom";
 
 const ProtectedRoute = () => {
 	const { user, isAuthenticated } = useSelector(selectUser);
-	return isAuthenticated ? <Outlet /> : <Navigate to={"/login"} />;
+	return isAuthenticated ? <Outlet /> : <Navigate to={"login"} />;
 };
 
 export default ProtectedRoute;
