@@ -22,7 +22,7 @@ const Navbar = () => {
     console.log(user);
     const navigate = useNavigate();
 
-    useEffect(() => {
+     useEffect(() => {
         if (status.logoutStatus === "success") {
             toast.success("Logout Success");
         }

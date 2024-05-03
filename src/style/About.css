@@ -79,6 +79,15 @@
 .rat_btn:hover .rat_iconStyle {
   transform: translateX(5px);
 }
+.about_feedback{
+  border: 4px solid black;
+  height: 200px;
+  width: 70%;
+  margin-top: 5x;
+  margin-left: 20px;
+  z-index: 11;
+  background: black;
+}
 
 
 
@@ -100,7 +109,7 @@
   position: relative;
   top: -100px;
   color: white;
-  /* border: 1px solid red; */
+   /*border: 1px solid red;*/
   /* background: #181818; */
 }
 

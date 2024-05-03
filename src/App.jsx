@@ -42,15 +42,18 @@ const App = () => {
 	return (
 		<Router>
 			<Navbar />
-			<Toaster />
+			  <Toaster />
 			<Routes>
-				<Route element={<ProtectedRoute />}>
-					<Route path='/compress' element={<Compress />} />
-					<Route path='/uploaded-images' element={<Download />} />
-					<Route path='/feedback' element={<Feedback />} />
+				 <Route element={<ProtectedRoute />}>
+				
 
-					<Route path='/profile' element={<Profile />} />
-				</Route>
+					  <Route path='/compress' element={<Compress />} /> 
+					  <Route path='/uploaded-images' element={<Download />} /> 
+					  <Route path='/feedback' element={<Feedback />} /> 
+					  <Route path='/profile' element={<Profile />} /> 					
+
+				 </Route> 	
+				
 
 				<Route path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />
