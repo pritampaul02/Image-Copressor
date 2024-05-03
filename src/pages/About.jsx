@@ -1,34 +1,30 @@
 import React from "react";
-import "../style/About.css";
+import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 
-import { MdKeyboardArrowRight } from "react-icons/md";
 import { FiMail } from "react-icons/fi";
-import { FaFacebookSquare } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FiInstagram } from "react-icons/fi";
 import { FaGoogle } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
+import { FiInstagram } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-
+import { FaFacebookSquare } from "react-icons/fa";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 import profile1 from "../media/ForAboutPage/profile1.jpg";
 import profile2 from "../media/ForAboutPage/profile2.jpg";
 import profile3 from "../media/ForAboutPage/profile3.jpg";
 import profile4 from "../media/ForAboutPage/profile4.jpg";
 
-import { useEffect, useState } from "react";
+import "../style/About.css";
 
 const About = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
-const [isOpen, setIsOpen] = useState(false);    
-     const toggleMenu = () => {
-             setIsOpen(!isOpen);
-             console.log(Open);
-        };
-     
+    console.log(isOpen);
 
     return (
         <div id="about_page">
@@ -49,12 +45,20 @@ const [isOpen, setIsOpen] = useState(false);
                             the world to us. Thank you for being a part of our
                             community !
                         </p>
-                        <Link onClick={toggleMenu} 
-                           to=" " className="rat_btn" >
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="rat_btn"
+                        >
                             Rate Us{" "}
                             <MdKeyboardArrowRight className="rat_iconStyle" />
-                        </Link>
-                        <div className={`about_feedback  ${isOpen ? "show" : "hidden"}`}> </div>
+                        </button>
+                        <div
+                            className={`about_feedback  ${
+                                isOpen ? "show" : ""
+                            }`}
+                        >
+                            {" "}
+                        </div>
                     </div>
                 </div>
 
@@ -87,10 +91,10 @@ const [isOpen, setIsOpen] = useState(false);
                                 Javascript, Css, Html etc.
                             </div>
                             <div id="persion_contact">
-                                <FiMail className="persion_cont_link_mail"/>
-                                <FaGithub id="persion_cont_link"/>
-                                <FaFacebookSquare id="persion_cont_link"/>
-                                <FiInstagram id="persion_cont_link"/>
+                                <FiMail className="persion_cont_link_mail" />
+                                <FaGithub id="persion_cont_link" />
+                                <FaFacebookSquare id="persion_cont_link" />
+                                <FiInstagram id="persion_cont_link" />
                             </div>
                         </div>
                     </div>
@@ -117,10 +121,10 @@ const [isOpen, setIsOpen] = useState(false);
                                 Javascript, Css, Html etc.
                             </div>
                             <div id="persion_contact">
-                                <FiMail className="persion_cont_link_mail"/>
-                                <FaGithub id="persion_cont_link"/>
-                                <FaFacebookSquare id="persion_cont_link"/>
-                                <FiInstagram id="persion_cont_link"/>
+                                <FiMail className="persion_cont_link_mail" />
+                                <FaGithub id="persion_cont_link" />
+                                <FaFacebookSquare id="persion_cont_link" />
+                                <FiInstagram id="persion_cont_link" />
                             </div>
                         </div>
                     </div>
@@ -147,10 +151,10 @@ const [isOpen, setIsOpen] = useState(false);
                                 Javascript, Css, Html etc.
                             </div>
                             <div id="persion_contact">
-                                <FiMail className="persion_cont_link_mail"/>
-                                <FaGithub id="persion_cont_link"/>
-                                <FaFacebookSquare id="persion_cont_link"/>
-                                <FiInstagram id="persion_cont_link"/>
+                                <FiMail className="persion_cont_link_mail" />
+                                <FaGithub id="persion_cont_link" />
+                                <FaFacebookSquare id="persion_cont_link" />
+                                <FiInstagram id="persion_cont_link" />
                             </div>
                         </div>
                     </div>
@@ -177,10 +181,10 @@ const [isOpen, setIsOpen] = useState(false);
                                 Javascript, Css, Html etc.
                             </div>
                             <div id="persion_contact">
-                                <FiMail className="persion_cont_link_mail"/>
-                                <FaGithub id="persion_cont_link"/>
-                                <FaFacebookSquare id="persion_cont_link"/>
-                                <FiInstagram id="persion_cont_link"/>
+                                <FiMail className="persion_cont_link_mail" />
+                                <FaGithub id="persion_cont_link" />
+                                <FaFacebookSquare id="persion_cont_link" />
+                                <FiInstagram id="persion_cont_link" />
                             </div>
                         </div>
                     </div>
@@ -190,12 +194,24 @@ const [isOpen, setIsOpen] = useState(false);
             <div id="third_container">
                 <h1>Contact Us</h1>
                 <div id="contact_link_container">
-                    <div id="logo_container"><FaGoogle /></div>
-                    <div id="logo_container"><SiWhatsapp /></div>
-                    <div id="logo_container"><FaXTwitter /></div>
-                    <div id="logo_container"><FaFacebookF /></div>
-                    <div id="logo_container"><FiInstagram /></div>
-                    <div id="logo_container"><FaLinkedinIn /></div>
+                    <div id="logo_container">
+                        <FaGoogle />
+                    </div>
+                    <div id="logo_container">
+                        <SiWhatsapp />
+                    </div>
+                    <div id="logo_container">
+                        <FaXTwitter />
+                    </div>
+                    <div id="logo_container">
+                        <FaFacebookF />
+                    </div>
+                    <div id="logo_container">
+                        <FiInstagram />
+                    </div>
+                    <div id="logo_container">
+                        <FaLinkedinIn />
+                    </div>
                 </div>
                 <p>Terms of Service</p>
                 <p>Privacy Policy</p>

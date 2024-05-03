@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 import { IoMdLogOut } from "react-icons/io";
 import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 import logo from "../media/logo.png";
+import { HiOutlineMenu, HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
     const activeLocation = useLocation().pathname;
@@ -22,7 +23,9 @@ const Navbar = () => {
     console.log(user);
     const navigate = useNavigate();
 
-     useEffect(() => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
         if (status.logoutStatus === "success") {
             toast.success("Logout Success");
         }
@@ -45,8 +48,40 @@ const Navbar = () => {
                     className="logo"
                 />
             </Link>
+
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 10,
+                }}
+            >
+                <Link
+                    // onClick={toggleMenu}
+                    className="profileContainer mobile"
+                    to="/profile"
+                >
+                    {isAuthenticated ? (
+                        <img src={user.profilePic} alt="" />
+                    ) : (
+                        <img src={profile} alt="" />
+                    )}
+                </Link>
+                <div
+                    className="hamberger"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    {menuOpen ? (
+                        <HiOutlineMenuAlt3 style={{ fontSize: "27px" }} />
+                    ) : (
+                        <HiOutlineMenu style={{ fontSize: "27px" }} />
+                    )}
+                </div>
+            </div>
+
             {/* <div className="menu"> */}
-            <div className="menuContainer">
+            <div className={`menuContainer ${menuOpen ? "active" : ""}`}>
                 {/* <Link
                     to="/"
                     className={activeLocation === "/" ? "menuActive" : ""}

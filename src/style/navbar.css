@@ -45,6 +45,29 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 450px) {
+    .menuContainer {
+        position: absolute;
+        background-color: black;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        top: 56px;
+        padding-block: 15px;
+        display: none;
+    }
+    .menuContainer.active {
+        display: flex;
+    }
+
+    .profileContainer {
+        display: none;
+    }
+    .profileContainer.mobile {
+        display: block;
+    }
+}
+
 /*.menuContainer > a {
     font-size: 15px;
     font-weight: 600;
