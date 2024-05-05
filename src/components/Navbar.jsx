@@ -104,7 +104,7 @@ const Navbar = () => {
                             : ""
                     }
                 >
-                    Uploaded Image
+                    Saved Image
                     <span></span>
                 </Link>
 

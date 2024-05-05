@@ -4,9 +4,10 @@ import { base_url } from '../../main.jsx'
 
 const initialState = {
     allImages: [],
-    selectedImage: {},
+    selectedImage: null,
     status: {
         uploadStatus: 'idle',
+        getallImages:"idle"
     },
     error: ""
 }
@@ -24,6 +25,20 @@ export const saveImage = createAsyncThunk('image/saveImage', async (compressedIm
         },
         withCredentials: true
     }
+    );
+    console.log(response);
+    return response.data;
+})
+export const getallImages = createAsyncThunk('image/getallImages', async () => {
+    const response = await api.get(
+        `${base_url}/api/image/all`,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+
+            },
+            withCredentials: true
+        }
     );
     console.log(response);
     return response.data;
@@ -48,6 +63,20 @@ const imageSlice = createSlice({
             })
             .addCase(saveImage.rejected, (state, action) => {
                 state.status.uploadStatus = 'failed';
+            })
+
+
+            // get all images
+            .addCase(getallImages.pending, (state, action) => {
+                state.status.getallImages = 'loading';
+            })
+            .addCase(getallImages.fulfilled, (state, action) => {
+                state.status.getallImages = 'success';
+
+                state.allImages = action.payload.images;
+            })
+            .addCase(getallImages.rejected, (state, action) => {
+                state.status.getallImages = 'failed';
             })
     }
 })

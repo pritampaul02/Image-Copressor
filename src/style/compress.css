@@ -175,6 +175,7 @@
 }
 
 .image_uploader {
+    cursor: pointer;
     background-color: var(--blueHover);
     outline: none;
     border: 1px solid var(--yellow);
