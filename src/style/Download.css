@@ -107,6 +107,7 @@
     text-shadow: none;
     box-shadow: 5px 5px 10px #0e0e0e4e;
     cursor: pointer;
+    
 }
 #download-botton {
     background: white;
@@ -167,7 +168,6 @@
     columns: 3;
     column-gap: 25px;
     break-inside: avoid;
-   
 }
 
 /* .secend_content .img_container {
@@ -204,3 +204,194 @@
     scale: 1.05;
     transition-duration: 1s;
   } */
+ 
+  @media screen and (max-width: 850px) {
+
+    #page_info {
+       
+        height: 55px;
+        border-bottom: 2px solid white;
+        font-weight: 600;
+    }
+    #your_img {  
+        font-size: 40px;
+    }
+
+    #select_img_conte {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 35px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .select_img {
+        height: 350px;
+        width: 700px;
+        position: relative;
+        background: #ffffff48;
+        margin-top: 30px;
+        margin-left: -65px;
+        border: 1px solid #6c6b6b;
+        border-radius: 10px;
+        box-shadow: 15px 15px 20px #000000ab;
+        cursor: pointer;
+    }
+    .img_size {
+        height: 100%;
+        margin: 0px auto;
+    }
+   
+    .desc_conte {
+        
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-inline: 10px;
+        width: 750px;
+    }
+    .desc {
+        padding: 10px 0px 10px 0px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .desc p {
+        margin-bottom: 5px;
+    }
+    #download_shear_conte {
+        width: 600px;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        gap: 15px;
+    }
+    .download-shear-botton {
+        height: 60px;
+        width: 80%;
+    }
+    .download_icon {
+        font-size: 42px;
+    }
+    .secend_content {
+        width: 100%;
+        margin-inline: auto;       
+        columns: 1;
+        gap: 10px;
+       
+    }
+
+    .secend_content img {
+        width: 65%;
+        height: auto;
+        margin: 0;
+        box-shadow: 5px 5px 20px #151515e1;
+        margin-left: 125px;
+        margin-top: 20px;
+    }
+    
+}  
+  @media screen and (max-width: 450px) {
+
+    #page_info {
+        height: 45px;
+        width: 300px;
+        border-bottom: 3px solid white;
+        font-weight: 600;
+        margin-left: -55px;
+       
+    }
+    #your_img {  
+        font-size: 20px;
+    }
+
+    #select_img_conte {
+        width: 300px;
+        height: 350px;
+        margin-top: 15px;
+        margin-left: -62px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    .select_img {
+        height: 300px;
+        width: 100%;
+        position: relative;
+        background: #ffffff48;
+        margin-top: 10px;
+        margin-left: -15px;
+        border: 1px solid #6c6b6b;
+        border-radius: 10px;
+        box-shadow: 15px 15px 20px #000000ab;
+        cursor: pointer;
+    }
+    .img_size {
+        height: 100%;
+        margin: 0px auto;
+    }
+   
+    .desc_conte {        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 750px;
+        height: 220px;
+        margin-left: -75px;
+        margin-top: 18px;
+       
+    }
+    .desc {
+        padding: 10px 0px 10px 0px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .desc p {
+        margin-bottom: 5px;
+    }
+    #download_shear_conte {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        gap: 15px;
+        position: absolute;
+        top: 510px;
+        right: 45px;
+        margin-top: 9px;
+       
+    }
+    .download-shear-botton {
+        height: 50px;
+        width: 45%;
+    }
+    .download_icon {
+        font-size: 35px;
+    }
+    .secend_content {
+        width: 100%;
+        margin-inline: auto;       
+        columns: 1;
+        gap: 10px;       
+        margin-top: -65px;
+       
+    }
+
+    .secend_content img {
+        width: 65%;
+        height: auto;
+        margin: 0;
+        box-shadow: 5px 5px 20px #151515e1;
+        margin-left: 50px;
+        margin-top: 10px;
+        
+    }
+    
+}  
