@@ -9,7 +9,7 @@
     height: 470px;
     width: 100%;
     padding-top: 30px;
-    padding-inline: 180px;
+    padding-inline: 10%;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -19,12 +19,6 @@
 
 /* ? mobile --> 450px
 ? tab --> 850px */
-
-@media screen and (max-width: 850px) {
-    #first_container {
-        padding-inline: 20px;
-    }
-}
 
 #slides_container {
     height: 320px;
@@ -39,7 +33,10 @@
 #slide {
     height: 100%;
     width: 50%;
-    padding: 40px 40px 0px 40px;
+    padding: 0px 40px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 10px 0px 0px 10px;
     background: #0000008b;
     backdrop-filter: blur(10px);
@@ -48,15 +45,17 @@
 }
 #thanks {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 2vw;
     color: white;
+    text-shadow: 2px 2px 3px #070707;
     font-weight: 700;
 }
 #slide p {
     color: #c0c0c0;
-    line-height: 1.2vw;
+    text-shadow: 1px 1px 3px #070707;
+    line-height: 1.3vw;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 1.1vw;
 }
 
 .rat_btn {
@@ -72,6 +71,7 @@
     color: var(--lightBlack);
     font-weight: 800;
     border-radius: 5px;
+    border: none;
 }
 
 .rat_iconStyle {
@@ -88,6 +88,14 @@
 .rat_btn:hover .rat_iconStyle {
     transform: translateX(5px);
 }
+
+#slide_p_and_botton_for_mobile{
+    display: none;
+}
+
+
+
+
 .about_feedback {
     position: absolute;
     border: 4px solid black;
@@ -117,7 +125,7 @@
 }
 
 #second_container {
-    padding-inline: 180px;
+    padding-inline: 10%;
     position: relative;
     top: -100px;
     color: white;
@@ -145,14 +153,19 @@
 
 #profile {
     margin: auto;
-    width: 75%;
+    overflow: hidden;
+    width: 65%;
     border-radius: 50%;
     border: 5px solid #ffb93a;
+}
+#profile img{
+    width: 100%;
 }
 
 #name {
     margin-top: 10px;
     color: #ffb93a;
+    text-shadow: 2px 2px 3px #070707;
     font-weight: 800;
     font-size: 18px;
 }
@@ -167,6 +180,7 @@
     text-align: justify;
     font-size: 14px;
     font-weight: 600;
+    text-shadow: 1px 1px 3px #070707;
 }
 
 #bio {
@@ -174,6 +188,7 @@
     text-align: justify;
     font-size: 12px;
     font-weight: 500;
+    text-shadow: 1px 1px 3px #070707;
     color: #c0c0c0;
 }
 
@@ -195,7 +210,7 @@
 #third_container {
     width: 100%;
     margin-top: 30px;
-    padding-inline: 180px;
+    padding-inline: 10%;
     position: relative;
     top: -100px;
     color: white;
@@ -203,19 +218,19 @@
 }
 #contact_link_container {
     margin-block: 50px;
-    padding-inline: 300px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    /* border: 1px solid red; */
+    justify-content: center;
+   /* r: 1px solid  bordered; */
 }
 #logo_container {
     height: 50px;
     width: 50px;
+    margin-inline: 2vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    font-size: 25px;
+    justify-content: center;
+    font-size: 28px;
     background: #dedede3b;
     backdrop-filter: blur(5px);
     border-radius: 50%;
@@ -231,12 +246,13 @@
     height: 225%;
     position: absolute;
     overflow: visible;
-    top: -250px;
+    top: -240px;
     left: 0px;
     z-index: -1;
     background-image: url("../media/ForAboutPage/back1.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position-x: 70%;
     background-position-y: 95%;
     filter: saturate(150%);
     /* border: 1px solid white; */
@@ -250,6 +266,508 @@
     z-index: -3;
     background: #181818;
 }
+
+
+
+/* This part for under 1450px viev */
+@media screen and (max-width: 1450px) {
+    #slide p {
+        line-height: 1.3vw;
+        font-size: 1.1vw;
+    }
+    #background_2 {
+        top: -240px;
+    }
+    #name {
+        font-size: 1.2vw;
+    }
+}
+
+
+/* This part for under 1300px viev */
+@media screen and (max-width: 1300px) {
+    #slide p {
+        line-height: 1.4vw;
+        font-size: 1.2vw;
+    }
+    #background_2 {
+        top: -250px;
+    }
+}
+/* This part for under 1200px viev */
+@media screen and (max-width: 1200px) {
+    #background_2 {
+        top: -290px;
+    }
+}
+
+
+
+
+
+/* This part for under 1000px viev */
+
+@media screen and (max-width: 1000px) {
+    #about_page {
+        height: 100%;
+        width: 100%;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+    #first_container {
+        padding-inline: 30px;
+    }
+    #slides_container {
+        height: 330px;
+        width: 100%;
+    }
+    #slide {
+        padding: 0px 30px 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #thanks {
+        margin-bottom: 20px;
+        font-size: 2.5vw;
+    }
+    #slide p {
+        line-height: 1.8vw;
+        font-weight: 500;
+        font-size: 1.6vw;
+    }
+    .rat_btn{
+        padding: 7px 10px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    #second_container {
+        padding-inline: 30px;
+        top: -90px;
+    }
+    #second_container h1{
+        font-size: 3.5vw;
+    }
+    #team_container {
+        width: 100%;
+        margin: 20px auto;
+        margin-bottom: 0px;
+    }
+    #team_card {
+        width: 48%;
+        margin-bottom: 20px;
+        padding: 20px 30px 20px 30px;
+    }
+    #profile {
+        width: 45%;
+        border: 6px solid #ffb93a;
+    }
+    #name {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.7vw;
+    }
+    #name_container hr {
+        margin-top: 5px;
+        height: 1.5px;
+    }
+    #post {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 2.1vw;
+        font-weight: 600;
+    }
+    #bio {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 1.7vw;
+        font-weight: 500;
+    }
+
+
+    #third_container {
+        margin-top: 0px;
+        padding-inline: 30px;
+        top: -90px;
+        /* border: 1px solid yellow; */
+    }
+    #third_container h1{
+        font-size: 3.5vw;
+    }
+    #contact_link_container {
+        margin-block: 40px;
+    }
+    #logo_container {
+        height: 5vw;
+        width: 5vw;
+        margin-inline: 2vw;
+        font-size: 3vw;
+    }
+    #third_container p {
+        margin-block: 2.5vw;
+        text-align: center;
+        cursor: pointer;
+    }    
+    #background_2 {
+        top: -240px;
+        background-size: 100%;
+        background-position-x: 70%;
+        background-position-y: 95%;
+    }
+    #background_3 {
+        height: 300vh;
+        bottom: -200px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* This part for tablet viev */
+
+
+@media screen and (max-width: 850px) {
+    #about_page {
+        height: 100%;
+        width: 100%;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+    #first_container {
+        padding-inline: 30px;
+    }
+    #slides_container {
+        height: 330px;
+        width: 100%;
+    }
+    #slide {
+        padding: 0px 30px 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #thanks {
+        margin-bottom: 20px;
+        font-size: 2.8vw;
+    }
+    #slide p {
+        line-height: 2vw;
+        font-weight: 500;
+        font-size: 1.8vw;
+    }
+    .rat_btn{
+        padding: 7px 10px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    #second_container {
+        padding-inline: 30px;
+        top: -90px;
+    }
+    #second_container h1{
+        font-size: 3.5vw;
+    }
+    #team_container {
+        width: 100%;
+        margin: 20px auto;
+        margin-bottom: 0px;
+    }
+    #team_card {
+        width: 48%;
+        margin-bottom: 20px;
+        padding: 20px 30px 20px 30px;
+    }
+    #profile {
+        width: 45%;
+        border: 6px solid #ffb93a;
+    }
+    #name {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.8vw;
+    }
+    #name_container hr {
+        margin-top: 5px;
+        height: 1.5px;
+    }
+    #post {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 2.2vw;
+        font-weight: 600;
+    }
+    #bio {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 1.8vw;
+        font-weight: 500;
+    }
+
+
+    #third_container {
+        margin-top: 0px;
+        padding-inline: 30px;
+        top: -90px;
+        /* border: 1px solid yellow; */
+    }
+    #third_container h1{
+        font-size: 3.5vw;
+    }
+    #contact_link_container {
+        margin-block: 40px;
+    }
+    #logo_container {
+        height: 5vw;
+        width: 5vw;
+        margin-inline: 2vw;
+        font-size: 3vw;
+    }
+    #third_container p {
+        margin-block: 2.5vw;
+        text-align: center;
+        cursor: pointer;
+    }    
+    #background_2 {
+        top: -210px;
+        background-size: 100%;
+        background-position-x: 70%;
+        background-position-y: 95%;
+    }
+    #background_3 {
+        height: 300vh;
+        bottom: -200px;
+    }
+    
+}
+
+@media screen and (max-width: 670px) {
+    #background_2 {
+        top: -190px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* This part for mobile viev */
+
+@media screen and (max-width:450px) {
+    #about_page {
+        height: 100%;
+        width: 100%;
+        padding-bottom: 40px;
+        overflow: hidden;
+    }
+    #first_container {
+        height: auto;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-inline: 10px;
+        padding-bottom: 20px;
+        /* border: 1px solid #9d36e1;   */
+    }
+    #slides_container {
+        height: 120px;
+        width: 100%;
+        border-radius: 10px;
+        /* border: 1px solid #2518cb; */
+    }
+    #slide {
+        padding: 20px 20px 0px 20px;
+        border-radius: 10px 0px 0px 10px;
+        background: #0000008b;
+        backdrop-filter: blur(10px);
+        text-align: justify;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* border: 1px solid #5198ed; */
+    }
+    #thanks {
+        font-size: 4.5vw;
+        text-shadow: 2px 2px 3px #070707;
+        font-weight: 700;
+    }
+    #slide p {
+      display: none;
+    }
+    .rat_btn {
+        display: none;       
+    }
+    #slide_p_and_botton_for_mobile{
+        display: block;   
+        padding: 10px 10px 0px 10px;
+        text-align: justify;
+        color: #c0c0c0;
+        /* border: 1px solid red;     */
+    }
+    #slide_p_and_botton_for_mobile p{
+        line-height: 4vw;
+        font-weight: 500;
+        font-size: 3.5vw;
+        text-shadow: 1px 1px 2px #070707;
+    }
+    #slide_p_and_botton_for_mobile .mobile_rat_btn{
+        width: fit-content;
+        margin-top: 10px;
+        padding: 4px 7px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--yellow);
+        font-size: 13px;
+        color: var(--lightBlack);
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+    }
+    #slide_p_and_botton_for_mobile .mobile_rat_iconStyle{
+        font-size: 21px;
+        transition: all 0.3s ease;
+    }
+    #slide_p_and_botton_for_mobile .mobile_rat_btn:hover{
+        background-color: var(--blueHover);
+        color: var(--gray);
+    }
+    #slide_p_and_botton_for_mobile .mobile_rat_btn:hover .mobile_rat_iconStyle{
+        transform: translateX(5px);
+    }
+    #background {
+        top: -65px;
+        transform: scale(1.1);
+        filter: blur(20px) brightness(70%) contrast(110%);
+    }
+
+
+    
+    #second_container {
+        padding-inline: 10px;
+        top: 0px;
+        /* border: 1px solid red; */
+    }
+    #second_container h1{
+        font-size: 5.5vw;
+    }
+    #team_container {
+        width: 100%;
+        margin: 15px auto;
+        margin-bottom: 0px;
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* border: 1px solid #498f74; */
+    }
+    #team_card {
+        width: 95%;
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+    #profile {
+        width: 35%;
+        border-radius: 50%;
+        border: 3px solid #ffb93a;
+    }
+    #name {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 5vw;
+    }
+    #name_container hr {
+        margin-top: 5px;
+        height: 1.5px;
+    }
+    #post {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 4vw;
+        font-weight: 500;
+    }
+    #bio {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 3vw;
+        font-weight: 400;
+    }
+    #third_container {
+        width: 100%;
+        margin-top: 05px;
+        padding-inline: 10px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    #third_container h1{
+        font-size: 5.5vw;
+    }
+    #contact_link_container {
+        margin-block: 30px;
+        padding-inline: 30px;
+        justify-content: space-around;
+    }
+    #logo_container {
+        height: 8vw;
+        width: 8vw;
+        margin-inline: 0px;
+        font-size: 4.5vw;
+    }
+    #third_container p {
+        margin-block: 10px;
+        font-size: 3vw;
+    }
+    #background_2 {
+        overflow: hidden;
+        top: -190px;
+        left: 0px;
+        z-index: -1;
+        background-size: 185%;
+        background-position-x: 70%;
+        background-position-y: 85%;
+    }
+    #background_3 {
+        height: 400vh;
+        bottom: -100px;
+    }
+}
+@media screen and (max-width: 400px){
+    #background_2 {
+        top: -160px;
+    }
+}
+@media screen and (max-width: 330px){
+    #background_2 {
+        top: -140px;
+    }
+}
+    
+
+
+
 
 /* This part for slide animation  */
 

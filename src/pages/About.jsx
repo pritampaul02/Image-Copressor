@@ -53,24 +53,43 @@ const About = () => {
                             <MdKeyboardArrowRight className="rat_iconStyle" />
                         </button>
                         <div
-                            className={`about_feedback  ${
-                                isOpen ? "show" : ""
-                            }`}
+                            className={`about_feedback  ${isOpen ? "show" : ""
+                                }`}
                         >
                             {" "}
                         </div>
                     </div>
+
+                </div>
+                <div id="slide_p_and_botton_for_mobile"> {/* this div only use in mobile view */}
+                    <p>
+                        Your experience is highly valued by us, and we would
+                        greatly appreciate your feedback through a star
+                        rating. Your input helps us improve and serve you
+                        better. If you enjoyed your time here, please
+                        consider sharing our website with others to help
+                        them discover the value we offer. Your support means
+                        the world to us. Thank you for being a part of our
+                        community !
+                    </p>
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="mobile_rat_btn"
+                    >
+                        Rate Us{" "}
+                        <MdKeyboardArrowRight className="mobile_rat_iconStyle" />
+                    </button>
                 </div>
 
                 <div id="background"></div>
             </div>
 
             <div id="second_container">
-                <h1>Our team</h1>
+                <h1>Our Team</h1>
                 <div id="team_container">
                     <div id="team_card">
-                        <center>
-                            <img id="profile" src={profile1} />
+                        <center id="profile">
+                            <img src={profile1} />
                         </center>
                         <div id="name_container">
                             <p id="name">SUSANTA SAMANTA</p>
@@ -99,8 +118,8 @@ const About = () => {
                         </div>
                     </div>
                     <div id="team_card">
-                        <center>
-                            <img id="profile" src={profile2} />
+                        <center id="profile">
+                            <img src={profile2} />
                         </center>
                         <div id="name_container">
                             <p id="name">SUSANTA SAMANTA</p>
@@ -129,8 +148,8 @@ const About = () => {
                         </div>
                     </div>
                     <div id="team_card">
-                        <center>
-                            <img id="profile" src={profile3} />
+                    <center id="profile">
+                            <img src={profile3} />
                         </center>
                         <div id="name_container">
                             <p id="name">SUSANTA SAMANTA</p>
@@ -159,8 +178,8 @@ const About = () => {
                         </div>
                     </div>
                     <div id="team_card">
-                        <center>
-                            <img id="profile" src={profile4} />
+                    <center id="profile">
+                            <img src={profile4} />
                         </center>
                         <div id="name_container">
                             <p id="name">SUSANTA SAMANTA</p>
