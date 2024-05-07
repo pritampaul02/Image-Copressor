@@ -1,7 +1,224 @@
-footer {
+/* footer {
     background-color: var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
+} */
+
+
+footer {
+    /* background-image: linear-gradient(180deg, #060e36,#020b38,#020b38,#020b38);
+    */
+    padding: 2vw 15vw 0.6vw 15vw;
+    color: white;
+    background: url('../media/ForFooter/footer back1.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 60%;
+    background-size: 100%;
+    /* border: 1px solid red; */
+    filter: saturate(90%) brightness(120%);
+}
+
+#footer_logo {
+    height: 60px;
+    width: 160px;
+    margin-bottom: 10px;
+    background: url('../media/logo.png');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 100%;
+    filter: saturate(70%);
+    /* border: 1px solid rgba(194, 193, 193, 0.618); */
+}
+
+#footer_top_details_container {
+    height: 100%;
+    width: 100%;
+    padding-block: 1vw;
+    border-bottom: 2px solid #7777777c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    /*border: 1px solid red; */
+}
+
+#footer_top_details {
+    padding: 0;
+    /* border: 1px solid #dadada50; */
+}
+
+#footer_top_details_heading {
+    margin-bottom: 15px;
+    /*medie*/
+    font-size: 20px;
+    font-weight: 700;
+    /* border: 1px solid #ffd900; */
+}
+
+#footer_top_details p {
+    color: #c3c3c3;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#footer_bottom_details_container {
+    padding-block: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #cccbd8; */
+}
+
+#footer_privacy {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    /*  border: 1px solid #f35fa1; */
+}
+
+#footer_privacy a {
+    margin-inline: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+#footer_bottom_details_container p {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    /*  border: 1px solid #af61f9; */
+}
+
+
+@media screen and (max-width: 1200px) {
+    footer {
+        padding: 1.8vw 10vw 0.8vw 10vw;
+    }
+
+    #footer_logo {
+        height: 40px;
+        width: 140px;
+    }
+
+    #footer_top_details_heading {
+        margin-bottom: 18px;
+        font-size: 20px;
+    }
+
+    #footer_top_details p {
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    footer {
+        padding: 2vw 8vw 1vw 8vw;
+    }
+
+    #footer_logo {
+        height: 40px;
+        width: 120px;
+    }
+
+    #footer_top_details_heading {
+        margin-bottom: 14px;
+        font-size: 18px;
+    }
+
+    #footer_top_details p {
+        font-size: 12px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+
+    #footer_bottom_details_container {
+        padding-block: 1.5vw;
+    }
+
+    #footer_privacy {
+        margin-bottom: 20px;
+    }
+
+    #footer_privacy a {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    #footer_bottom_details_container p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    footer {
+        padding: 5vw 6vw 2vw 6vw;
+        background-position-x: 5%;
+        background-position-y: 30%;
+        background-size: 205%;
+        /* border: 1px solid #949286; */
+    }
+
+    #footer_logo {
+        height: 08vw;
+        width: 30vw;
+        margin-bottom: 4vw;
+    }
+
+    #footer_top_details_container {
+        padding-block: 0vw;
+        padding-top: 1vw;
+        padding-bottom: 0px;
+        justify-content: center;
+    }
+
+    #footer_top_details {
+        width: 100%;
+        margin-bottom: 4.5vw;
+        text-align: center;
+    }
+
+    #footer_top_details_heading {
+        margin-bottom: 2vw;
+        font-size: 3vw;
+        font-weight: 700;
+        /* border: 1px solid #ffd900; */
+    }
+
+    #footer_top_details p {
+        line-height: 4vw;
+        font-size: 2.2vw;
+        font-weight: 400;
+    }
+
+    #footer_bottom_details_container {
+        padding-block: 2vw;
+    }
+
+    #footer_privacy {
+        margin-bottom: 4vw;
+    }
+
+    #footer_privacy a {
+        margin-inline: 5vw;
+        font-size: 2.2vw;
+        font-weight: 400;
+    }
+
+    #footer_bottom_details_container p {
+        font-size: 2.2vw;
+        font-weight: 400;
+    }
+
+
 }
