@@ -1,5 +1,5 @@
 #about_page {
-    height: 1420px;
+    height: 100%;
     overflow: hidden;
     width: 100%;
     /* border: 1px solid red; */
@@ -297,7 +297,7 @@
 /* This part for under 1200px viev */
 @media screen and (max-width: 1200px) {
     #background_2 {
-        top: -290px;
+        top: -270px;
     }
 }
 
