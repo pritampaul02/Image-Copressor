@@ -559,6 +559,11 @@
         top: -190px;
     }
 }
+@media screen and (max-width: 580px) {
+    #background_2 {
+        top: -170px;
+    }
+}
 
 
 
