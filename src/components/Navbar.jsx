@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import profile from "../media/image.png";
+import defaultprofile from "../media/DefaultProfile01.jpg"
 
 import "../style/navbar.css";
 import { useEffect, useState } from "react";
@@ -65,7 +66,7 @@ const Navbar = () => {
                     {isAuthenticated ? (
                         <img src={user.profilePic} alt="" />
                     ) : (
-                        <img src={profile} alt="" />
+                        <img src={defaultprofile} alt="" />
                     )}
                 </Link>
                 <div
@@ -132,7 +133,7 @@ const Navbar = () => {
                     {isAuthenticated ? (
                         <img src={user.profilePic} alt="" />
                     ) : (
-                        <img src={profile} alt="" />
+                        <img src={defaultprofile} alt="" />
                     )}
                 </Link>
 
