@@ -1,7 +1,7 @@
 :root {
   --home-page-content-back: #2e2e2eb6;
   --hone-page-p-color: #e6e6e6fc;
-  --homepage_img_color: #0d4fd492;
+  --homepage_img_shadow_color: #0d4fd492;
 }
 
 
@@ -90,7 +90,7 @@
   top: -0px; */
   transform: scale(1.03);
   /* filter: drop-shadow(0px 0px 80px #0d4fd492); */
-  filter: drop-shadow(0px 0px 80px var(--homepage_img_color));
+  filter: drop-shadow(0px 0px 80px var(--homepage_img_shadow_color ));
   /* border: 1px solid #1cb41c76; */
 }
 
@@ -326,8 +326,8 @@
     width: 40%;
   }
 
-  #homepage_img_container_img {
-    filter: drop-shadow(0px 0px 60px var(--homepage_img_color));
+  #homepage_img_container_img { 
+    filter: drop-shadow(0px 0px 60px var(--homepage_img_shadow_color));
   }
 
   .btn {
@@ -419,7 +419,7 @@
   }
 
   #homepage_img_container_img {
-    filter: drop-shadow(0px 0px 50px var(--homepage_img_color));
+    filter: drop-shadow(0px 0px 50px var(--homepage_img_shadow_color));
   }
 
   .btn {
@@ -503,7 +503,7 @@
   }
 
   #homepage_img_container_img {
-    filter: drop-shadow(0px 0px 45px var(--homepage_img_color));
+    filter: drop-shadow(0px 0px 45px var(--homepage_img_shadow_color));
   }
 
   .btn {
@@ -615,6 +615,7 @@
 
   #homepage_img_container_img_for_mob {
     width: 98%;
+    filter: drop-shadow(0px 0px 50px var(--homepage_img_shadow_color));
     /* border: 1px solid #b8b6b6; */
   }
 
