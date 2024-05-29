@@ -4,14 +4,18 @@
 .hidden{
     display: none;
 } */
+:root{
+    --navbar-bg-color: #121212d1;
+}
 
 .navber {
     display: flex;
     align-items: center;
     justify-content: space-between;
     /*background-color: var(--blue);*/
-    background: black;
-    backdrop-filter: blur(15px);
+    /* background: #121212c1; */
+    background: var(--navbar-bg-color);
+    backdrop-filter: blur(25px);
     padding: 5px 30px;
     height: 56px;
     color: white;
@@ -28,10 +32,12 @@
     height: 100%;
     text-decoration: none;
 }
+
 .logo_container .logo {
     width: auto;
     height: 100%;
 }
+
 /* .menu{
     display: flex;
     align-items: center;
@@ -45,25 +51,50 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 450px) {
+.profileContainer.mobile {
+    display: none;
+}
+
+.hamberger {
+    display: none;
+}
+
+/* @media screen and (max-width: 450px) { */
+@media screen and (max-width: 650px) {
+    .navber {
+        padding: 5px 20px;
+        height: 50px;
+        z-index: 10;
+    }
+
     .menuContainer {
         position: absolute;
         background-color: black;
         flex-direction: column;
         width: 100%;
         left: 0;
-        top: 56px;
+        top: 50px;
         padding-block: 15px;
         display: none;
     }
+    
     .menuContainer.active {
         display: flex;
+        overflow: hidden;
+        background: var(--navbar-bg-color);
+        /* background: #121212c1;
+        backdrop-filter: blur(25px);   not working */ 
     }
-
+    
     .profileContainer {
         display: none;
     }
+
     .profileContainer.mobile {
+        display: block;
+    }
+
+    .hamberger {
         display: block;
     }
 }
@@ -77,13 +108,15 @@
 .menuActive {
     border-bottom: 2px solid white;
 }
+
 .menuContainer Link {
     font-size: 15px;
     font-weight: 600;
     padding-inline: 5px;
     transition: 0.6s;
 }
-.menuContainer > Link:hover {
+
+.menuContainer>Link:hover {
     color: #0ef;
 }
 
@@ -105,13 +138,14 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
 } */
-.profileContainer > img {
+.profileContainer>img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
     border: 2px solid var(--yellow);
     padding: 3px;
 }
+
 .menu {
     position: absolute;
     background: black;
@@ -122,12 +156,14 @@
     align-items: center;
     border-radius: 5px;
 }
+
 .menu .menu-item {
     list-style: none;
     padding: 0 5px 0 10px;
     margin-top: 2px;
     cursor: pointer;
 }
+
 .menu-item:hover {
     background: white;
     color: black;

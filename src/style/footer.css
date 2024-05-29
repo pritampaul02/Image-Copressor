@@ -165,7 +165,7 @@ footer {
         padding: 5vw 6vw 2vw 6vw;
         background-position-x: 5%;
         background-position-y: 30%;
-        background-size: 205%;
+        background-size: 210%;
         /* border: 1px solid #949286; */
     }
 
@@ -190,14 +190,14 @@ footer {
 
     #footer_top_details_heading {
         margin-bottom: 2vw;
-        font-size: 3vw;
+        font-size: 3.5vw;
         font-weight: 700;
         /* border: 1px solid #ffd900; */
     }
 
     #footer_top_details p {
         line-height: 4vw;
-        font-size: 2.2vw;
+        font-size: 2.5vw;
         font-weight: 400;
     }
 
@@ -211,7 +211,7 @@ footer {
 
     #footer_privacy a {
         margin-inline: 5vw;
-        font-size: 2.2vw;
+        font-size: 2.5vw;
         font-weight: 400;
     }
 
