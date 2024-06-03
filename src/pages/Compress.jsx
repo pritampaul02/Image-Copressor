@@ -15,53 +15,78 @@ import { saveImage, selectImage } from "../redux/slices/imageSlice";
 import toast from "react-hot-toast";
 
 const Compress = () => {
-	const [image, setImage] = useState(null);
-	const [range, setRange] = useState(100);
-	const [maxRange, setMaxrange] = useState(100);
-	const [minRange, setMinrange] = useState(1);
 
-	const [imageSize, setImageSize] = useState("");
-	const [uploadedImage, setUploadedImage] = useState(addImage);
-	const [compressedImage, setCompressedImage] = useState(noImage);
-
-	const [imageData, setImageData] = useState("");
-	// const [imgPreview, setImgPreview] = useState('/vite.svg')
+	// const [imageSize, setImageSize] = useState("");
+	// const [uploadedImage, setUploadedImage] = useState(addImage);
+	// const [compressedImage, setCompressedImage] = useState(noImage);
+	// const [imageData, setImageData] = useState("");
 	const { status, selectedImage } = useSelector(selectImage);
+
+	const [v, setV] = useState(null);
+	const [originalSize, setOriginalSize] = useState(0);
+	const [loading, setLoading] = useState(false);
+	const [percent, setPercentage] = useState(1);
+	const [CPSize, setCPSize] = useState(null);
+	const [resultImg, setResultImg] = useState();
+	const [imgPreview, setImgPreview] = useState(noImage);
+
+	const dispatch = useDispatch();
+
 
 	useEffect(() => {
 		if (status.uploadStatus === "success") {
 			toast.success("Image Saved Successfully");
 		}
 
-        console.log(selectedImage);
 	}, [status.uploadStatus]);
 
-	const dispatch = useDispatch();
+	useEffect(() => {
+		if (v !== null) {
+			handleImageUpload(v);
+		}
+	}, [percent]);
 
-	const handleImageUpload = async (event) => {
-		const imageFile = event.target.files[0];
-		setImage(imageFile);
+	const setImageHandler = (e) => {
+		const image = e.target.files[0];
+		setV(image);
+		handleImageUpload(image);
+		const reader = new FileReader();
+
+		reader.onload = function (e) {
+			setImgPreview(e.target.result);
+		};
+		reader.readAsDataURL(image);
+	};
+
+	const handleImageUpload = async (imageFile) => {
+		console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
+		let originalSize = imageFile.size / 1024 / 1024;
+		setOriginalSize(originalSize.toFixed(3));
+		setLoading(true);
 
 		const options = {
-			maxSizeMB: 0.1,
+			maxSizeMB: (percent / 10).toFixed(1),
+
 			maxWidthOrHeight: 1920,
 			useWebWorker: true,
 		};
 		try {
 			const compressedFile = await imageCompression(imageFile, options);
+
+			setLoading(false);
+
 			console.log(
 				`compressedFile size ${compressedFile.size / 1024 / 1024} MB`
-			); // smaller than maxSizeMB
-			setImageSize(compressedFile.size / 1024 / 1024);
+			);
+			setCPSize((compressedFile.size / 1024 / 1024).toFixed(3));
+
 
 			const reader = new FileReader();
 
 			reader.onload = function (e) {
-				// Set the result of the FileReader to the state variable
-				setImageData(e.target.result);
-				setUploadedImage(e.target.result);
-				setCompressedImage(e.target.result);
-				console.log(e.target.result);
+
+				setResultImg(e.target.result);
+				setImgPreview(e.target.result);
 			};
 
 			reader.readAsDataURL(compressedFile);
@@ -70,28 +95,13 @@ const Compress = () => {
 		}
 	};
 
+
+	
+
 	const handleSaveImage = () => {
 		console.log(88989);
-		dispatch(saveImage(compressedImage));
-	};
+		dispatch(saveImage(resultImg));
 
-	function roundToThreeDecimalPlaces(num) {
-		return Math.round(num * 1000) / 1000;
-	}
-
-	const handleImageDownload = () => {
-		fetch(selectedImage?.url)
-			.then((response) => response.blob())
-			.then((blob) => {
-				const url = URL.createObjectURL(blob);
-				const a = document.createElement("a");
-				a.href = url;
-				a.download = selectedImage?.public_id;
-				document.body.appendChild(a);
-				a.click();
-				document.body.removeChild(a);
-			})
-			.catch((error) => console.error("Error downloading image:", error));
 	};
 
 	return (
@@ -100,18 +110,21 @@ const Compress = () => {
 			<div className='compressContainer'>
 				<div className='beforeImage'>
 					<img
-						src={uploadedImage}
-						style={
-							uploadedImage === addImage
-								? { width: "60px", height: "auto" }
-								: {}
-						}
+						src={imgPreview}
+						// style={
+						// 	uploadedImage === addImage
+						// 		? { width: "60px", height: "auto" }
+						// 		: {}
+						// }
+
 						alt='Your Uploaded Image'
 					/>
 				</div>
 				<img src={spiral} alt='spiral' className='spiralSvg' />
 				<div className='afterImage'>
-					<img
+
+					{/* <img
+
 						src={compressedImage}
 						style={
 							compressedImage === noImage
@@ -119,50 +132,53 @@ const Compress = () => {
 								: {}
 						}
 						alt='Your Uploaded Image'
-					/>
+					/> */}
+
+					{loading === true ? (
+						<h2>Loading</h2>
+					) : (
+						<img className='compress-img' src={resultImg} alt='hi' />
+					)}
+
 				</div>
 			</div>
 
 			<div className='compressActions'>
 				<input
 					type='file'
-					onChange={handleImageUpload}
+					onChange={setImageHandler}
+
 					id='imageUploadBtn'
 					hidden
 				/>
 				<label htmlFor='imageUploadBtn' className='image_uploader'>
 					Upload{" "}
-					{/* <span>{uploadedImage !== addImage ? ` ${uploadedImage}` : ""}</span> */}
-					<span>{roundToThreeDecimalPlaces(imageSize)} MB</span>
 				</label>
 
 				<div className='rangeSlider'>
-					{/* <p>min : {minRange}</p> */}
-					{/* <p>min : {roundToThreeDecimalPlaces(imageSize)} MB</p> */}
+					<p>Value: {percent}%</p>
 					<input
 						type='range'
-						min={minRange}
-						max={maxRange}
-						value={range}
-						onChange={(e) => setRange(e.target.value)}
+						min='1'
+						max='100'
+						value={percent}
+						onChange={(e) => setPercentage(e.target.value)}
 						className='sizeChanger'
 					/>
-					<p>{range} %</p>
-					{/* <p>{roundToThreeDecimalPlaces(imageSize)} MB</p> */}
+					<p>original Size: {originalSize}mb</p>
+					<p>compress Size: {CPSize}mb</p>
 				</div>
 
 				<div className='actions'>
-					{selectedImage && (
-						<button
-							onClick={handleImageDownload}
-							download={true}
-							className='btn-compress'
-							title='Download'
-						>
-							{/* <p>Download</p> */}
-							<IoCloudDownloadSharp />
-						</button>
-					)}
+					<a
+						href={resultImg}
+						download='compressed_image.jpg'
+						className='btn-compress'
+					>
+						{/* <p>Download</p> */}
+						<IoCloudDownloadSharp />
+					</a>
+
 					<button
 						onClick={handleSaveImage}
 						className='btn-compress'
@@ -171,7 +187,10 @@ const Compress = () => {
 						{/* <p>Upload</p> */}
 						<IoCloudUploadSharp />
 					</button>
-					{selectedImage && (
+
+
+					{selectedImage?.url != undefined && (
+
 						<button
 							onClick={() => {
 								selectedImage &&
@@ -186,6 +205,7 @@ const Compress = () => {
 							<IoIosShareAlt />
 						</button>
 					)}
+
 					{/* <button
                         type="submit"
                         className="btn-compress btnCompress-primary"
