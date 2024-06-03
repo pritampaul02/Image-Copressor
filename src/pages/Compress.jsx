@@ -15,6 +15,7 @@ import { saveImage, selectImage } from "../redux/slices/imageSlice";
 import toast from "react-hot-toast";
 
 const Compress = () => {
+
 	// const [imageSize, setImageSize] = useState("");
 	// const [uploadedImage, setUploadedImage] = useState(addImage);
 	// const [compressedImage, setCompressedImage] = useState(noImage);
@@ -31,10 +32,12 @@ const Compress = () => {
 
 	const dispatch = useDispatch();
 
+
 	useEffect(() => {
 		if (status.uploadStatus === "success") {
 			toast.success("Image Saved Successfully");
 		}
+
 	}, [status.uploadStatus]);
 
 	useEffect(() => {
@@ -63,11 +66,13 @@ const Compress = () => {
 
 		const options = {
 			maxSizeMB: (percent / 10).toFixed(1),
+
 			maxWidthOrHeight: 1920,
 			useWebWorker: true,
 		};
 		try {
 			const compressedFile = await imageCompression(imageFile, options);
+
 			setLoading(false);
 
 			console.log(
@@ -75,23 +80,28 @@ const Compress = () => {
 			);
 			setCPSize((compressedFile.size / 1024 / 1024).toFixed(3));
 
+
 			const reader = new FileReader();
 
 			reader.onload = function (e) {
+
 				setResultImg(e.target.result);
 				setImgPreview(e.target.result);
 			};
+
 			reader.readAsDataURL(compressedFile);
 		} catch (error) {
 			console.log(error);
 		}
 	};
 
+
 	
 
 	const handleSaveImage = () => {
 		console.log(88989);
 		dispatch(saveImage(resultImg));
+
 	};
 
 	return (
@@ -106,12 +116,15 @@ const Compress = () => {
 						// 		? { width: "60px", height: "auto" }
 						// 		: {}
 						// }
+
 						alt='Your Uploaded Image'
 					/>
 				</div>
 				<img src={spiral} alt='spiral' className='spiralSvg' />
 				<div className='afterImage'>
+
 					{/* <img
+
 						src={compressedImage}
 						style={
 							compressedImage === noImage
@@ -126,6 +139,7 @@ const Compress = () => {
 					) : (
 						<img className='compress-img' src={resultImg} alt='hi' />
 					)}
+
 				</div>
 			</div>
 
@@ -133,6 +147,7 @@ const Compress = () => {
 				<input
 					type='file'
 					onChange={setImageHandler}
+
 					id='imageUploadBtn'
 					hidden
 				/>
@@ -163,6 +178,7 @@ const Compress = () => {
 						{/* <p>Download</p> */}
 						<IoCloudDownloadSharp />
 					</a>
+
 					<button
 						onClick={handleSaveImage}
 						className='btn-compress'
@@ -172,7 +188,9 @@ const Compress = () => {
 						<IoCloudUploadSharp />
 					</button>
 
+
 					{selectedImage?.url != undefined && (
+
 						<button
 							onClick={() => {
 								selectedImage &&
