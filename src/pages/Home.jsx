@@ -20,13 +20,13 @@ const Home = () => {
     const navigate = useNavigate();
     const { user, isAuthenticated } = useSelector(selectUser);
 
-    useEffect(() => {
-        if (!isAuthenticated) {
-            navigate("/");
-        } else {
-            navigate("/compress");
-        }
-    }, [isAuthenticated]);
+    // useEffect(() => {
+    //     if (!isAuthenticated) {
+    //         navigate("/");
+    //     } else {
+    //         navigate("/compress");
+    //     }
+    // }, [isAuthenticated]);
 
     return (
         <section id="homepage">

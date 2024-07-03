@@ -96,7 +96,7 @@ const Compress = () => {
 	};
 
 
-	
+
 
 	const handleSaveImage = () => {
 		console.log(88989);
@@ -135,7 +135,7 @@ const Compress = () => {
 					/> */}
 
 					{loading === true ? (
-						<h2>Loading</h2>
+						<h2>Loading...</h2>
 					) : (
 						<img className='compress-img' src={resultImg} alt='hi' />
 					)}
@@ -154,9 +154,27 @@ const Compress = () => {
 				<label htmlFor='imageUploadBtn' className='image_uploader'>
 					Upload{" "}
 				</label>
-
+				<div id="uploder_percent_mobile_view">  {/* mobile */}
+					<label htmlFor='imageUploadBtn' className='image_uploader_for_mobile'>
+						Upload{" "}
+					</label>
+					<div id='rangeSlider_mobile'>
+						<p>original Size: {originalSize}mb</p>
+						<p>compress Size: {CPSize}mb</p>
+						{/* <input
+							type='range'
+							min='1'
+							max='100'
+							value={percent}
+							onChange={(e) => setPercentage(e.target.value)}
+							className='sizeChanger_mobile'
+						/>
+						<p>{percent}%</p> */}
+					</div>
+				</div>                                   {/* mobile */}
 				<div className='rangeSlider'>
 					<p>Value: {percent}%</p>
+					<p id="rangeSlider_2nd_p">{percent}%</p>
 					<input
 						type='range'
 						min='1'
@@ -168,6 +186,7 @@ const Compress = () => {
 					<p>original Size: {originalSize}mb</p>
 					<p>compress Size: {CPSize}mb</p>
 				</div>
+
 
 				<div className='actions'>
 					<a
@@ -185,7 +204,7 @@ const Compress = () => {
 						title='Upload'
 					>
 						{/* <p>Upload</p> */}
-						<IoCloudUploadSharp />
+						<IoCloudUploadSharp/>
 					</button>
 
 
@@ -202,7 +221,7 @@ const Compress = () => {
 							title='Share'
 						>
 							{/* <p>Share</p> */}
-							<IoIosShareAlt />
+							<IoIosShareAlt id="compress_ing_shear"/>
 						</button>
 					)}
 

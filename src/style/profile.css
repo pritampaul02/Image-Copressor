@@ -13,31 +13,34 @@
 .profile_box {
     height: 400px;
     width: 350px;
-    border: 5px solid;
-    border-left-color: blue;
+    border: 3px solid #646464;
+    /* border-left-color: blue;
     border-right-color: blue;
     border-top-color: #ec45f2;
-    border-bottom-color: #ec45f2;
-    border-radius: 5px;
+    border-bottom-color: #ec45f2; */
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding-top: 12px;
+    padding-top: 24px;
 }
 
 .profile_box .profile_image {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid #ffb93a;
+    /* border: 5px solid white; */
     position: relative;
     top: 5px;
 }
 
 .profile_box h2 {
-    color: #ec45f2;
-    margin-top: 10px;
+    color: #efefef;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 27px;
 }
 
