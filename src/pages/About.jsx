@@ -14,10 +14,14 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-import profile1 from "../media/ForAboutPage/profile1.jpg";
-import profile2 from "../media/ForAboutPage/profile2.jpg";
-import profile3 from "../media/ForAboutPage/profile3.jpg";
-import profile4 from "../media/ForAboutPage/profile4.jpg";
+// import profile1 from "../media/ForAboutPage/profile1.jpg";
+import profile1 from "../media/ForAboutPage/ahinDp.jpg";
+// import profile2 from "../media/ForAboutPage/profile2.jpg";
+import profile2 from "../media/ForAboutPage/myDp.jpg";
+// import profile3 from "../media/ForAboutPage/profile3.jpg";
+import profile3 from "../media/ForAboutPage/sayandipDp.jpg";
+// import profile4 from "../media/ForAboutPage/profile4.jpg";
+import profile4 from "../media/ForAboutPage/rabiDp.jpg";
 
 import "../style/About.css";
 
@@ -45,19 +49,23 @@ const About = () => {
                             the world to us. Thank you for being a part of our
                             community !
                         </p>
-                        <button
+                        {/* <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="rat_btn"
-                        >
-                            Rate Us{" "}
+                            >
+                            Let's Try{" "}
                             <MdKeyboardArrowRight className="rat_iconStyle" />
-                        </button>
-                        <div
+                        </button> */}
+                        {/* <div
                             className={`about_feedback  ${isOpen ? "show" : ""
-                                }`}
-                        >
+                            }`}
+                            >
                             {" "}
-                        </div>
+                            </div> */}
+                        <Link to="/compress" className="rat_btn">
+                            Let's Try{" "}
+                            <MdKeyboardArrowRight className="rat_iconStyle" />        
+                        </Link>
                     </div>
 
                 </div>
@@ -76,7 +84,7 @@ const About = () => {
                         onClick={() => setIsOpen(!isOpen)}
                         className="mobile_rat_btn"
                     >
-                        Rate Us{" "}
+                        Let's Try{" "}
                         <MdKeyboardArrowRight className="mobile_rat_iconStyle" />
                     </button>
                 </div>
@@ -92,14 +100,14 @@ const About = () => {
                             <img src={profile1} />
                         </center>
                         <div id="name_container">
-                            <p id="name">SUSANTA SAMANTA</p>
+                            <p id="name">AHIN MUKHERJEE</p>
                             <hr></hr>
                             <p id="post">
                                 Software And Webdeveloper, Graphic Designer,
                                 Photo Video editor
                             </p>
                             <div id="bio">
-                                Hello my name is Susanta Samanta. I am from
+                                Hello my name is Ahin Mukherjee. I am from
                                 Kolkata. I have 1 complete full stack
                                 development experience. I have a basic
                                 photo,video editing skill. And also i have some
@@ -152,14 +160,14 @@ const About = () => {
                             <img src={profile3} />
                         </center>
                         <div id="name_container">
-                            <p id="name">SUSANTA SAMANTA</p>
+                            <p id="name">SAYANDIP BAG</p>
                             <hr></hr>
                             <p id="post">
                                 Software And Webdeveloper, Graphic Designer,
                                 Photo Video editor
                             </p>
                             <div id="bio">
-                                Hello my name is Susanta Samanta. I am from
+                                Hello my name is Sayandip Bag. I am from
                                 Kolkata. I have 1 complete full stack
                                 development experience. I have a basic
                                 photo,video editing skill. And also i have some
@@ -172,7 +180,7 @@ const About = () => {
                             <div id="persion_contact">
                                 <FiMail className="persion_cont_link_mail" />
                                 <FaGithub id="persion_cont_link" />
-                                <FaFacebookSquare id="persion_cont_link" />
+                               <a href="https://www.facebook.com/share/AH9Znm55mEqETcpf/?mibextid=qi2Omg"><FaFacebookSquare id="persion_cont_link" /></a>
                                 <FiInstagram id="persion_cont_link" />
                             </div>
                         </div>
@@ -182,14 +190,14 @@ const About = () => {
                             <img src={profile4} />
                         </center>
                         <div id="name_container">
-                            <p id="name">SUSANTA SAMANTA</p>
+                            <p id="name">RABI SAMANTA</p>
                             <hr></hr>
                             <p id="post">
                                 Software And Webdeveloper, Graphic Designer,
                                 Photo Video editor
                             </p>
                             <div id="bio">
-                                Hello my name is Susanta Samanta. I am from
+                                Hello my name is Rabi Samanta. I am from
                                 Kolkata. I have 1 complete full stack
                                 development experience. I have a basic
                                 photo,video editing skill. And also i have some
@@ -202,8 +210,8 @@ const About = () => {
                             <div id="persion_contact">
                                 <FiMail className="persion_cont_link_mail" />
                                 <FaGithub id="persion_cont_link" />
-                                <FaFacebookSquare id="persion_cont_link" />
-                                <FiInstagram id="persion_cont_link" />
+                                 <a href="https://www.facebook.com/share/iYFWd5qN4zSo4K2B/?mibextid=qi2Omg"><FaFacebookSquare id="persion_cont_link" /></a>
+                                <a href="https://www.instagram.com/rabi.samanta_129?igsh=MWxibzh6MmJ6cDNjNg=="><FiInstagram id="persion_cont_link" /></a>
                             </div>
                         </div>
                     </div>

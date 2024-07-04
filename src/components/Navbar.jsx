@@ -42,7 +42,7 @@ const Navbar = () => {
 
     return (
         <header className="navber">
-            <Link to="/" className="logo_container">
+            <Link to="/compress" className="logo_container">
                 <img
                     src={logo}
                     alt="Compresso - The ultimate image compressor"
@@ -83,13 +83,13 @@ const Navbar = () => {
 
             {/* <div className="menu"> */}
             <div className={`menuContainer ${menuOpen ? "active" : ""}`}>
-                {/* <Link
+                <Link
                     to="/"
                     className={activeLocation === "/" ? "menuActive" : ""}
                 >
                     Home
                     <span></span>
-                </Link> */}
+                </Link>
                 <Link
                     to="/about"
                     className={activeLocation === "/about" ? "menuActive" : ""}
@@ -97,6 +97,7 @@ const Navbar = () => {
                     About
                     <span></span>
                 </Link>
+                
                 <Link
                     to="/uploaded-images"
                     className={
