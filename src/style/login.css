@@ -225,3 +225,88 @@
     }
     
 }  
+/* @media screen and (max-width: 450px) {
+    .login_img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border: solod black;
+        overflow: hidden; 
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .img{
+        width: 55%;
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .login {
+        height: 255px;
+        width: 165px;
+        font-size: 20px;      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .login h2 {
+        font-size: 27px;  
+    }
+    .login p {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    
+    #benifit h3{
+        font-size: 1.4rem;
+        margin-top: 3px;     
+    }
+    #benifit p{
+        font-size: 1.05rem;   
+    }
+}  
+@media screen and (max-width: 850px) {
+   
+    .img{
+        width: 75%;
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login {
+        height: 170px;
+        width: 400px;
+        font-size: 20px;
+        box-shadow: 1px;
+        text-align: center;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login h2 {
+        font-size: 40px;
+        margin-top: 5px;
+    }
+
+    .login p {
+        font-size: 30px;       
+    }
+
+    #benifit h3{
+        font-size: 2.5rem; 
+        margin-top: 2px;     
+    }
+    #benifit p{
+        font-size: 2rem;     
+    }
+    
+}   */
