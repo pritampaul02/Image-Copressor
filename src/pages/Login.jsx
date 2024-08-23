@@ -70,6 +70,11 @@ const Login = () => {
                     justifyContent: "center",
                     padding: 10px,
                 }}
+					reader.onload = function (e) {
+				setImageData(e.target.result);
+				setImgPreview(e.target.result);
+                console.log(e.target.result);
+			};
             >
 				<div className='login_page'>
 					<div className='login_img'>
