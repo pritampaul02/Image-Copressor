@@ -75,6 +75,13 @@ const Login = () => {
 				setImgPreview(e.target.result);
                 console.log(e.target.result);
 			};
+
+			     <button
+                        type="submit"
+                        className="btn-compress btnCompress-primary"
+                    >
+                        Compress
+                    </button>
             >
 				<div className='login_page'>
 					<div className='login_img'>
