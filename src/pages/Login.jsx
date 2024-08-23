@@ -61,6 +61,39 @@ const Login = () => {
 					</div>
 				</div>
 			</div>
+
+
+			{/* <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 10,
+                }}
+            >
+				<div className='login_page'>
+					<div className='login_img'>
+						<div className='img' id='googlelogin'>
+							<div className='login'>
+								<h2>Quick Compressor </h2>
+								<p>Compress your image quickly </p>
+								<GoogleLogin
+									className='button'
+									onSuccess={handleSignup}
+									onError={() => {
+										console.log("Login Failed");
+									}}
+								/>
+							</div>
+						</div>
+						<div className='img' id='benifit'>
+							<h3>you will get the following benefits if you login</h3>
+							<p>First you will see all the compresed images in album from</p>
+						</div>
+					</div>
+				</div> 
+
+             </div> */}
 		</>
 	);
 };
