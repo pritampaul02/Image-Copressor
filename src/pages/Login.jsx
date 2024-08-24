@@ -68,21 +68,10 @@ const Login = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    padding: 10px,
-                }}
-					reader.onload = function (e) {
-				setImageData(e.target.result);
-				setImgPreview(e.target.result);
-                console.log(e.target.result);
-			};
 
-			     <button
-                        type="submit"
-                        className="btn-compress btnCompress-primary"
-                    >
-                        Compress
-                    </button>
-            >
+                    gap: 10,
+                }}
+
 				<div className='login_page'>
 					<div className='login_img'>
 						<div className='img' id='googlelogin'>

@@ -97,6 +97,7 @@ const Navbar = () => {
                     About
                     <span></span>
                 </Link>
+
                 <Link
                     to="/compress"
                     className={activeLocation === "/compress" ? "menuActive" : ""}
