@@ -82,6 +82,25 @@ const feedback = () => {
         </div>
         </div>
     </div>
+
+    {/* <button
+                        type="submit"
+                        className="btn-compress btnCompress-primary"
+                    >
+                        Compress
+                    </button> */}
+    {/* <button
+                        type="submit"
+                        className="btn-compress btnCompress-primary"
+                    >
+                        Compress
+                    </button> */}
+    {/* <button
+                        type="submit"
+                        className="btn-compress btnCompress-primary"
+                    >
+                        Compress
+                    </button> */}
     </>
   )
 }
