@@ -66,6 +66,7 @@ const Login = () => {
 			{/* <div
                 style={{
                     display: "flex",
+					flex-wrap : wrap,
                     alignItems: "center",
                     justifyContent: "center",
                     gap: 10,
