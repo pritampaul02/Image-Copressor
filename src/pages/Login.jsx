@@ -69,7 +69,7 @@ const Login = () => {
 					flex-wrap : wrap,
                     alignItems: "center",
                     justifyContent: "center",
-                    gap: 10,
+                    gap: 5px,
                 }}
             >
 				<div className='login_page'>
