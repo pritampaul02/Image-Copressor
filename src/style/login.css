@@ -818,4 +818,11 @@
         
     }
 
+    .login {
+        height: 300px;
+        width: 150px;
+        font-size: 20px;      
+        gap: 10px;
+    }
+
 }
