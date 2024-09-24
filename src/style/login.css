@@ -800,7 +800,7 @@
    
    #benifit h3{
        font-size: 0.3rem;
-       color: blue;
+       /* color: blue; */
        margin-top: 5px;     
    }
    #benifit p{
@@ -823,6 +823,34 @@
         width: 150px;
         font-size: 20px;      
         gap: 10px;
+    }
+
+    .login h2 {
+        font-size: 8px; 
+       
+    }
+    .login p {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+ 
+    #googlelogin{
+        border-radius: 20px 20px 0px 0px; 
+      }
+ 
+    #benifit{
+        border-radius: 0px 0px 20px 20px; 
+        position: absolute;
+        top: 405px;
+ 
+    }
+    
+    #benifit h3{
+        font-size: 0.3rem;
+        margin-top: 5px;     
+    }
+    #benifit p{
+        font-size: 1.05rem;   
     }
 
 }
