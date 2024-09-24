@@ -214,6 +214,7 @@
 
 @media screen and (max-width: 425px) {
 
+
     .login_img {
         height: 100%;
         width: 100%;
@@ -383,7 +384,9 @@
 
 
 
+
 @media screen and (max-width:1400px){
+
 
     .login_img {
         height: 100%;
@@ -449,6 +452,10 @@
         width: 35%;
         height: 60%;
         display: flex;
+        object-fit: contain;
+        border: solid black;
+        overflow: hidden; 
+        background-position: center;
         justify-content: center;
         align-items: center;
      }
@@ -523,6 +530,7 @@
     #benifit p{
         font-size: 2.5rem;
            
+
     }
 
 }
@@ -580,6 +588,7 @@
         /*box-shadow: 15px 15px 20px #000000ab;*/
         
     }
+
 
     .login {
         height: 250px;
@@ -681,6 +690,7 @@
 }  
 
 
+
 @media screen and (max-width: 425px){
 
 
@@ -691,6 +701,7 @@
         border: solid black;
         overflow: hidden; 
         background-position: center;
+
         justify-content: center;
         align-items: center;
         display: flex;
@@ -708,6 +719,7 @@
         height: 265px;
         width: 275px;
         font-size: 20px;      
+
         display: flex;
         flex-direction: column;
         align-items: center;

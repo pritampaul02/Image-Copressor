@@ -70,8 +70,9 @@ const Login = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     gap: 5px,
+
                 }}
-            >
+
 				<div className='login_page'>
 					<div className='login_img'>
 						<div className='img' id='googlelogin'>
