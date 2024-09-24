@@ -7,7 +7,7 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
-    border: solod black;
+    /* border: solid black; */
     overflow: hidden;
     background-image: url("../media/login.png");
     background-size: cover;
@@ -89,6 +89,7 @@
     position: absolute;
     top: 1px;
     right: -115px;
+    
 } 
 
 #benifit{
@@ -126,6 +127,7 @@
     top: 1px;
     right: -115px;
 } */
+ 
 /*.login_img img{
     width: 100%;
     height: auto;
@@ -140,13 +142,24 @@
     filter: blur(31px) brightness(80%) contrast(110%) saturate(150%);
 }*/
 
+@media screen and (max-width:310px){
+
+    .img{
+        width: 350px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;      
+    }
+
+}
+/* 
 @media screen and (max-width: 375px) {
 
      .login_img {
         height: 450px;
         width: 100px;
         object-fit: contain;
-        /* border: solid black; */
+        border: solid black;
         overflow: hidden; 
         background-position: center;
         justify-content: center;
@@ -154,8 +167,8 @@
         display: inline-block;
     }
     .img{
-        /* width: 90%; */
-        height: 60%;
+        width: 85%;
+        height: 70%;
         display: flex;
         flex-direction: row;
         
@@ -191,8 +204,8 @@
     
     #benifit h3{
         font-size: 0.3rem;
-        /* color: blue; */
-        /* margin-top: 5px;      */
+        color: blue;
+        margin-top: 5px;     
     }
     #benifit p{
         font-size: 1.05rem;   
@@ -215,15 +228,15 @@
         position: relative;
     }
     .img{
-        width: 50%;
-        height: 70%;
+        width: 85%;
+        height: 50%;
         display: flex;
         flex-direction: row;
         
     }
     .login {
         height: 255px;
-        width: 165px;
+        width: 195px;
         font-size: 20px;      
         display: flex;
         flex-direction: column;
@@ -231,10 +244,13 @@
         justify-content: center;
         gap: 10px;
         margin-top: -120px;
+        position: absolute;
+        top: 150.5px;
     }
    
     .login h2 {
-        font-size: 27px;  
+        font-size: 27px; 
+        color: blue; 
     }
     .login p {
         font-size: 22px;
@@ -260,7 +276,8 @@
         font-size: 1.05rem;   
     }
 }  
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 460px) {
 
     .login_img {
         height: 100%;
@@ -273,10 +290,12 @@
         align-items: center;
         display: flex;
     }
+
     .img{
-        width: 50%;
-        height: 50%;
-        display: flex;    
+        width: 250px;
+        height: 250px;
+        display: flex; 
+        border: 2px solid red;
         
     }
     .login {
@@ -288,98 +307,8 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-    }
-   
-    .login h2 {
-        font-size: 27px;  
-    }
-    .login p {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-    
-    #benifit h3{
-        font-size: 1.4rem;
-        margin-top: 3px;     
-    }
-    #benifit p{
-        font-size: 1.05rem;   
-    }
-}  
-
-@media screen and (max-width: 850px) {
-   
-    .img{
-        width: 75%;
-        height: 75%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .login {
-        height: 200px;
-        width: 400px;
-        font-size: 20px;
-        box-shadow: 1px;
-        text-align: center;
-        background: transparent;
-        border: 2px solid rgba(255, 255, 255, 0.5);    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .login h2 {
-        font-size: 40px;
-        margin-top: 5px;
-    }
-
-    .login p {
-        font-size: 30px;       
-    }
-
-    #benifit h3{
-        font-size: 2.5rem; 
-        margin-top: 2px;     
-    }
-    #benifit p{
-        font-size: 2rem;     
-    }
-    
-}  
-
-
-/* @media screen and (max-width: 450px) {
-
-    .login_img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        border: solid black;
-        overflow: hidden; 
-        background-position: center;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        position: relative;
-    }
-    .img{
-        width: 50%;
-        height: 70%;
-        display: flex;
-        flex-direction: row;
-        
-    }
-    .login {
-        height: 255px;
-        width: 165px;
-        font-size: 20px;      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin-top: -120px;
+        position: absolute;
+        top: 50.5px;
     }
    
     .login h2 {
@@ -402,60 +331,16 @@
     }
     
     #benifit h3{
-        font-size: 1.7rem;
-        margin-top: 3px; 
-    }
-    #benifit p{
-        font-size: 1.05rem;   
-    }
-}  
-@media screen and (max-width: 450px) {
-
-    .login_img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        border: solid black;
-        overflow: hidden; 
-        background-position: center;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-    .img{
-        width: 50%;
-        height: 50%;
-        display: flex;    
-        
-    }
-    .login {
-        height: 255px;
-        width: 165px;
-        font-size: 20px;      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-   
-    .login h2 {
-        font-size: 27px;  
-    }
-    .login p {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-    
-    #benifit h3{
         font-size: 1.4rem;
         margin-top: 3px;     
     }
     #benifit p{
         font-size: 1.05rem;   
     }
-}  
+}   */
 
+
+/* 
 @media screen and (max-width: 850px) {
    
     .img{
@@ -496,3 +381,488 @@
     }
     
 }   */
+
+
+
+
+@media screen and (max-width:1400px){
+
+
+    .login_img {
+        height: 100%;
+        width: 100%;
+    }
+    .img {
+        width: 30%;
+        height: 60%;
+    }
+    
+    .login {
+        height: 150px;
+        width: 400px;
+        font-size: 20px;
+    }
+
+    .login h2 {
+        font-size: 40px;
+    }
+
+    .login p {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .google {
+        height: 50px;
+        width: 300px;
+        position: absolute;
+        top: 90px;
+        left: 15px;
+    }
+    .google img {
+        position: absolute;
+        top: -5px;
+        left: -39px;
+        height: 40px;
+        width: auto;
+    }
+    .continue {
+        font-size: 29px;
+        position: absolute;
+        top: 7px;
+        left: 41px;
+    }
+
+    #benifit h3{
+        font-size: 33px;
+        margin-left: 15px;
+        margin-top: -20px ;
+    }
+    #benifit p{
+        font-size: 24px;
+        margin-left: 15px;
+        margin-top: 20px ;
+    }
+    
+
+}
+@media screen and (max-width:1280px){
+
+    .img{
+        width: 35%;
+        height: 60%;
+        display: flex;
+        object-fit: contain;
+        border: solid black;
+        overflow: hidden; 
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+     }
+     
+     .login {
+         height: 230px;
+         width: 400px;
+         font-size: 20px;
+         box-shadow: 1px;
+         text-align: center;
+         background: transparent;
+         border: 2px solid rgba(255, 255, 255, 0.5);    
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+     .login h2 {
+         font-size: 42px;
+         margin-top: 15px;
+     }
+ 
+     .login p {
+         font-size: 30px;       
+     }
+ 
+        
+    #benifit h3{
+        font-size: 40px;
+        margin-left: 15px;
+        margin-top: -20px ;
+    }
+    #benifit p{
+        font-size: 30px;
+        margin-left: 15px;
+        margin-top: 20px ;
+    }
+ 
+
+}
+@media screen and (max-width:1000px){
+
+    .img{
+       width: 45%;
+       height: 60%;  
+    }
+    
+    .login {
+        height: 230px;
+        width: 400px;
+        font-size: 20px;
+        box-shadow: 1px;
+        text-align: center;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login h2 {
+        font-size: 42px;
+        margin-top: 15px;
+    }
+
+    .login p {
+        font-size: 30px;       
+    }
+
+    #benifit h3{
+        font-size: 2.9rem;
+        margin-top: 1.5px;       
+    }
+    #benifit p{
+        font-size: 2.5rem;
+           
+
+    }
+
+}
+@media screen and (max-width: 850px){
+
+    .img{
+        width: 65%;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login {
+        height: 230px;
+        width: 400px;
+        font-size: 20px;
+        box-shadow: 1px;
+        text-align: center;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login h2 {
+        font-size: 42px;
+        margin-top: 15px;
+    }
+
+    .login p {
+        font-size: 30px;       
+    }
+
+    #benifit h3{
+        font-size: 2.9rem;
+        margin-top: 1.5px;       
+    }
+    #benifit p{
+        font-size: 2.5rem;
+           
+    }
+    
+
+}
+@media screen and (max-width: 720px){
+
+    .img {
+        width: 46.5%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid white;
+        /*box-shadow: 15px 15px 20px #000000ab;*/
+        
+    }
+
+
+    .login {
+        height: 250px;
+        width: 400px;
+        font-size: 20px;
+    }
+    .login h2 {
+        font-size: 43px;
+        font-weight: bolder;
+        margin-top: 15px;
+    }
+
+    .login p {
+        font-size: 30px;       
+    }
+
+    #benifit h3{
+        font-size: 2.2rem;
+        margin-top: 1.5px;       
+    }
+    #benifit p{
+        font-size: 1.5rem;
+           
+    }
+    
+}
+
+@media screen and (max-width: 550px){
+
+    .login {
+        height: 250px;
+        width: 300px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .login_img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border: solid black;
+        overflow: hidden; 
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    
+    .img{
+        width: 75%;
+        height: 80%;
+        /* display: flex; 
+        border: 2px solid red; */
+        
+    }
+
+    .login {
+        height: 265px;
+        width: 275px;
+        font-size: 20px;      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 50.5px;
+    }
+   
+    .login h2 {
+        font-size: 39px; 
+        font-weight: bolder; 
+    }
+    .login p {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    #googlelogin{
+        border-radius: 20px 20px 0px 0px; 
+      }
+
+    #benifit{
+        border-radius: 0px 0px 20px 20px; 
+        position: absolute;
+        top: 470px;
+
+    }
+    
+    #benifit h3{
+        font-size: 1.4rem;
+        margin-top: 3px;     
+    }
+    #benifit p{
+        font-size: 1.05rem;   
+    }
+}  
+
+
+
+@media screen and (max-width: 425px){
+
+
+    .login_img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        border: solid black;
+        overflow: hidden; 
+        background-position: center;
+
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    
+    .img{
+        width: 80%;
+        height: 70%;
+        /* display: flex;
+        flex-direction: row;
+             */
+     }
+
+    .login {
+        height: 265px;
+        width: 275px;
+        font-size: 20px;      
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 150.5px;
+    }
+   
+    .login h2 {
+        font-size: 39px; 
+        font-weight: bolder; 
+    }
+    .login p {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    #googlelogin{
+        border-radius: 20px 20px 0px 0px; 
+      }
+
+    #benifit{
+        border-radius: 0px 0px 20px 20px; 
+        position: absolute;
+        top: 470px;
+
+    }
+    
+    #benifit h3{
+        font-size: 1.4rem;
+        margin-top: 3px;     
+    }
+    #benifit p{
+        font-size: 1.05rem;   
+    }
+
+ }
+
+
+@media screen and (max-width: 375px){
+
+    .login_img {
+       height: 450px;
+       width: 100px;
+       object-fit: contain;
+       /* border: solid black; */
+       overflow: hidden; 
+       background-position: center;
+       justify-content: center;
+       align-items: center;
+       display: inline-block;
+   }
+   .img{
+       width: 85%;
+       height: 70%;
+       /* display: flex;
+       flex-direction: row; */
+       
+   }
+
+   .login {
+       height: 300px;
+       width: 150px;
+       font-size: 20px;      
+       gap: 10px;
+        /* border: 2px solid black; 
+       margin-top: -80px;  */
+   }
+  
+   .login h2 {
+       font-size: 8px; 
+      
+   }
+   .login p {
+       font-size: 22px;
+       margin-bottom: 10px;
+   }
+
+   #googlelogin{
+       border-radius: 20px 20px 0px 0px; 
+     }
+
+   #benifit{
+       border-radius: 0px 0px 20px 20px; 
+       position: absolute;
+       top: 405px;
+
+   }
+   
+   #benifit h3{
+       font-size: 0.3rem;
+       /* color: blue; */
+       margin-top: 5px;     
+   }
+   #benifit p{
+       font-size: 1.05rem;   
+   }
+}  
+
+@media screen and (max-width: 320px){
+
+    .img{
+        width: 350px;
+        height: 250px;
+        /* display: flex;
+        flex-direction: row; */
+        
+    }
+
+    .login {
+        height: 300px;
+        width: 150px;
+        font-size: 20px;      
+        gap: 10px;
+    }
+
+    .login h2 {
+        font-size: 8px; 
+       
+    }
+    .login p {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+ 
+    #googlelogin{
+        border-radius: 20px 20px 0px 0px; 
+      }
+ 
+    #benifit{
+        border-radius: 0px 0px 20px 20px; 
+        position: absolute;
+        top: 405px;
+ 
+    }
+    
+    #benifit h3{
+        font-size: 0.3rem;
+        margin-top: 5px;     
+    }
+    #benifit p{
+        font-size: 1.05rem;   
+    }
+
+}

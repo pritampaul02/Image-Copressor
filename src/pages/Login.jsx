@@ -66,10 +66,11 @@ const Login = () => {
 			{/* <div
                 style={{
                     display: "flex",
+					flex-wrap : wrap,
                     alignItems: "center",
                     justifyContent: "center",
+                    gap: 5px,
 
-                    gap: 10,
                 }}
 
 				<div className='login_page'>
